@@ -1,0 +1,1963 @@
+/* =====================================================
+RESET
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* =====================================================
+HTML
+===================================================== */
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* =====================================================
+BODY
+===================================================== */
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #0a0f1c;
+    color: #fff;
+    line-height: 1.6;
+}
+
+/* =====================================================
+INPUTS
+===================================================== */
+
+input,
+textarea {
+    margin: 10px 0;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    background: #111827;
+    color: white;
+    font-family: inherit;
+    font-size: 15px;
+}
+
+input:focus,
+textarea:focus {
+    outline: 2px solid #4f8cff;
+}
+
+/* =====================================================
+NAVBAR
+===================================================== */
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 10000;
+
+    display: flex;
+    align-items: center;
+
+    padding: 10px 40px;
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    background: rgba(10, 15, 28, 0.92);
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* =====================================================
+LOGO
+===================================================== */
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 22px;
+
+    color: #4f8cff;
+    text-decoration: none;
+
+    position: relative;
+    z-index: 10001;
+}
+
+.logo img {
+    width: 50px;
+    height: 50px;
+
+    border-radius: 50%;
+    object-fit: cover;
+
+    border: 2px solid white;
+
+    transition: transform 0.3s ease;
+}
+
+.logo:hover img {
+    transform: rotate(5deg) scale(1.05);
+}
+
+/* =====================================================
+NAVIGATION
+===================================================== */
+
+nav {
+    display: flex;
+    align-items: center;
+
+    margin-left: auto;
+    margin-right: 100px;
+
+    position: relative;
+    z-index: 10001;
+}
+
+nav a,
+.dropbtn {
+    margin-left: 20px;
+
+    text-decoration: none;
+    color: #aaa;
+
+    font-size: 16px;
+
+    background: none;
+    border: none;
+
+    cursor: pointer;
+
+    transition: color 0.25s ease;
+
+    font-family: inherit;
+
+    position: relative;
+}
+
+nav a:hover,
+.dropbtn:hover {
+    color: #4f8cff;
+}
+
+/* =====================================================
+MAIN SUBJECTS DROPDOWN
+===================================================== */
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+
+    /*
+    Creates a small invisible bridge between
+    Subjects button and dropdown.
+    */
+
+    padding-bottom: 10px;
+    margin-bottom: -10px;
+}
+
+/* =====================================================
+MAIN DROPDOWN PANEL
+===================================================== */
+
+.dropdown-content {
+    display: none;
+
+    position: absolute;
+
+    /*
+    IMPORTANT:
+    This controls vertical position.
+    */
+
+    top: calc(100% - 1px);
+    left: 0;
+
+    min-width: 210px;
+
+    background: #111827;
+
+    border-radius: 10px;
+
+    padding: 7px 0;
+
+    z-index: 20000;
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.55);
+
+    border:
+        1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* =====================================================
+OPEN MAIN DROPDOWN
+===================================================== */
+
+.dropdown:hover > .dropdown-content {
+    display: block;
+}
+
+.dropdown:focus-within > .dropdown-content {
+    display: block;
+}
+
+.dropdown.active > .dropdown-content {
+    display: block;
+}
+
+/* =====================================================
+MAIN DROPDOWN LINKS
+===================================================== */
+
+.dropdown-content > .sub-dropdown > a {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 11px 15px;
+
+    color: white;
+    text-decoration: none;
+
+    font-size: 14px;
+
+    margin: 0;
+
+    transition:
+        background 0.25s ease,
+        padding-left 0.25s ease;
+}
+
+.dropdown-content > .sub-dropdown > a:hover {
+    background: rgba(79, 140, 255, 0.18);
+
+    color: white;
+
+    padding-left: 20px;
+}
+
+/* =====================================================
+SUB DROPDOWN
+===================================================== */
+
+.sub-dropdown {
+    position: relative;
+}
+
+/* =====================================================
+SUB DROPDOWN ARROW
+===================================================== */
+
+.sub-dropdown > a span {
+    color: #8fa8d0;
+
+    font-size: 13px;
+
+    margin-left: 15px;
+}
+
+/* =====================================================
+SUB DROPDOWN CONTENT
+===================================================== */
+
+.sub-dropdown-content {
+    display: none;
+
+    position: absolute;
+
+    /*
+    IMPORTANT:
+    Submenu starts at the top of the
+    Mathematics / Physics / Chemistry row.
+    */
+
+    top: 0;
+    left: calc(100% - 1px);
+
+    min-width: 210px;
+
+    background: #1a1f2e;
+
+    border-radius: 10px;
+
+    padding: 7px 0;
+
+    z-index: 30000;
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.55);
+
+    border:
+        1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* =====================================================
+OPEN SUBMENU
+===================================================== */
+
+.sub-dropdown:hover > .sub-dropdown-content {
+    display: block;
+}
+
+.sub-dropdown:focus-within > .sub-dropdown-content {
+    display: block;
+}
+
+.sub-dropdown.active > .sub-dropdown-content {
+    display: block;
+}
+
+.sub-dropdown-content:hover {
+    display: block;
+}
+
+/* =====================================================
+SUBMENU LINKS
+===================================================== */
+
+.sub-dropdown-content a {
+    display: block;
+
+    padding: 11px 15px;
+
+    margin: 0;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    white-space: nowrap;
+
+    transition:
+        background 0.25s ease,
+        padding-left 0.25s ease;
+}
+
+.sub-dropdown-content a:hover {
+    background: rgba(79, 140, 255, 0.18);
+
+    color: white;
+
+    padding-left: 20px;
+}
+
+/* =====================================================
+HERO
+===================================================== */
+
+.hero {
+    min-height: calc(100vh - 70px);
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    background:
+        radial-gradient(
+            circle at 50% 30%,
+            rgba(79, 140, 255, 0.16),
+            transparent 40%
+        ),
+
+        linear-gradient(
+            135deg,
+            #0a0f1c,
+            #1a237e,
+            #0d47a1
+        );
+
+    text-align: center;
+
+    padding: 70px 20px 90px;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+.hero::before {
+    content: "";
+
+    position: absolute;
+
+    width: 400px;
+    height: 400px;
+
+    background:
+        rgba(79, 140, 255, 0.08);
+
+    border-radius: 50%;
+
+    filter: blur(70px);
+
+    top: -150px;
+    right: -100px;
+
+    pointer-events: none;
+}
+
+.hero::after {
+    content: "";
+
+    position: absolute;
+
+    width: 350px;
+    height: 350px;
+
+    background:
+        rgba(26, 35, 126, 0.2);
+
+    border-radius: 50%;
+
+    filter: blur(70px);
+
+    bottom: -150px;
+    left: -100px;
+
+    pointer-events: none;
+}
+
+/* =====================================================
+HERO CONTENT
+===================================================== */
+
+.hero-content {
+    position: relative;
+
+    z-index: 2;
+
+    width: 100%;
+
+    max-width: 1050px;
+
+    margin: auto;
+}
+
+/* =====================================================
+HERO BADGE
+===================================================== */
+
+.hero-badge {
+    display: inline-block;
+
+    padding: 7px 16px;
+
+    margin-bottom: 18px;
+
+    border-radius: 50px;
+
+    background:
+        rgba(79, 140, 255, 0.12);
+
+    border:
+        1px solid rgba(79, 140, 255, 0.3);
+
+    color: #a2b4d4;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+}
+
+/* =====================================================
+HERO HEADING
+===================================================== */
+
+.hero h1 {
+    font-family: 'Poppins', sans-serif;
+
+    font-size: clamp(42px, 6vw, 68px);
+
+    line-height: 1.1;
+
+    margin-bottom: 18px;
+
+    color: #ffffff;
+
+    text-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* =====================================================
+HERO DESCRIPTION
+===================================================== */
+
+.hero p {
+    max-width: 650px;
+
+    margin: 0 auto 35px;
+
+    color: #d0d5df;
+
+    font-size: 18px;
+
+    line-height: 1.7;
+}
+
+/* =====================================================
+HERO ACTION TILES
+===================================================== */
+
+.hero-actions {
+    display: flex;
+
+    justify-content: center;
+    align-items: stretch;
+
+    gap: 25px;
+
+    margin-top: 35px;
+
+    flex-wrap: wrap;
+}
+
+.action-tile {
+    width: 360px;
+
+    min-height: 115px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    padding: 18px 22px;
+
+    text-decoration: none;
+
+    color: inherit;
+
+    text-align: left;
+
+    border-radius: 18px;
+
+    background:
+        rgba(255, 255, 255, 0.08);
+
+    border:
+        1px solid rgba(255, 255, 255, 0.14);
+
+    backdrop-filter: blur(12px);
+
+    -webkit-backdrop-filter: blur(12px);
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.15);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease,
+        background 0.3s ease;
+}
+
+.action-tile:hover {
+    transform: translateY(-7px);
+
+    background:
+        rgba(255, 255, 255, 0.11);
+
+    border-color:
+        rgba(79, 140, 255, 0.5);
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.25),
+        0 0 25px rgba(79, 140, 255, 0.15);
+}
+
+/* =====================================================
+CHANNEL ICON
+===================================================== */
+
+.action-icon {
+    width: 58px;
+    height: 58px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    background:
+        rgba(79, 140, 255, 0.18);
+
+    border:
+        1px solid rgba(79, 140, 255, 0.3);
+
+    color: #ffffff;
+
+    font-size: 21px;
+
+    box-shadow:
+        0 0 15px rgba(79, 140, 255, 0.2);
+}
+
+.action-tile h3 {
+    margin: 0 0 5px;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 18px;
+
+    color: #ffffff;
+}
+
+.action-tile p {
+    margin: 0;
+
+    font-size: 14px;
+
+    color: #c8ceda;
+}
+
+/* =====================================================
+FEATURED VIDEO
+===================================================== */
+
+.video-tile {
+    overflow: hidden;
+}
+
+.video-thumbnail {
+    position: relative;
+
+    width: 135px;
+    height: 80px;
+
+    flex-shrink: 0;
+
+    overflow: hidden;
+
+    border-radius: 12px;
+
+    background: #05070f;
+}
+
+.video-thumbnail img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition:
+        transform 0.4s ease;
+}
+
+.video-tile:hover .video-thumbnail img {
+    transform: scale(1.08);
+}
+
+.play-button {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    transform:
+        translate(-50%, -50%);
+
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background:
+        rgba(0, 0, 0, 0.78);
+
+    color: white;
+
+    font-size: 15px;
+
+    box-shadow:
+        0 3px 10px rgba(0, 0, 0, 0.35);
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease;
+}
+
+.video-tile:hover .play-button {
+    transform:
+        translate(-50%, -50%)
+        scale(1.12);
+
+    background:
+        rgba(79, 140, 255, 0.9);
+}
+
+.video-info {
+    min-width: 0;
+}
+
+.video-info .video-label {
+    display: block;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.2px;
+
+    color: #8fa8d0;
+
+    margin-bottom: 4px;
+}
+
+.video-info h3 {
+    margin: 0 0 4px;
+
+    font-size: 17px;
+
+    color: #ffffff;
+}
+
+.video-info p {
+    margin: 0;
+
+    font-size: 13px;
+
+    color: #c8ceda;
+}
+
+/* =====================================================
+SECTIONS
+===================================================== */
+
+.section {
+    padding: 80px 12%;
+
+    text-align: center;
+
+    scroll-margin-top: 80px;
+}
+
+.section h2 {
+    margin-bottom: 20px;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 32px;
+}
+
+.section > p {
+    max-width: 800px;
+
+    margin: 0 auto 20px;
+
+    color: #c8ceda;
+
+    font-size: 16px;
+
+    line-height: 1.8;
+}
+
+.dark {
+    background: #05070f;
+}
+
+/* =====================================================
+LEARNING VIDEO GRID
+===================================================== */
+
+.videos-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(280px, 1fr)
+        );
+
+    gap: 25px;
+
+    width: 100%;
+
+    max-width: 1100px;
+
+    margin: 30px auto 40px;
+}
+
+/* =====================================================
+GENERAL VIDEO CARD
+===================================================== */
+
+.video-card {
+    position: relative;
+
+    width: 100%;
+
+    cursor: pointer;
+
+    background: #111827;
+
+    border-radius: 14px;
+
+    overflow: hidden;
+
+    border:
+        1px solid rgba(79, 140, 255, 0.15);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.video-card:hover {
+    transform:
+        translateY(-7px)
+        scale(1.02);
+
+    border-color:
+        rgba(79, 140, 255, 0.55);
+
+    box-shadow:
+        0 12px 30px
+        rgba(79, 140, 255, 0.25);
+}
+
+/* =====================================================
+CLICKABLE YOUTUBE CARDS
+===================================================== */
+
+.youtube-card {
+    display: block;
+
+    text-decoration: none;
+
+    color: inherit;
+
+    cursor: pointer;
+}
+
+/* =====================================================
+THUMBNAIL
+===================================================== */
+
+.thumbnail {
+    position: relative;
+
+    width: 100%;
+
+    aspect-ratio: 16 / 9;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            135deg,
+            #111827,
+            #1a237e,
+            #0d47a1
+        );
+
+    border:
+        1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* =====================================================
+ALL THUMBNAIL IMAGES
+===================================================== */
+
+.thumbnail img {
+    width: 100%;
+
+    height: 100%;
+
+    display: block;
+
+    object-fit: contain;
+
+    object-position: center;
+
+    background: #05070f;
+
+    transition:
+        transform 0.4s ease;
+}
+
+/* =====================================================
+YOUTUBE THUMBNAIL IMAGE
+===================================================== */
+
+.youtube-card .thumbnail img {
+    width: 100%;
+
+    height: 100%;
+
+    display: block;
+
+    object-fit: contain;
+
+    object-position: center;
+
+    background: #05070f;
+
+    transition:
+        transform 0.4s ease;
+}
+
+/* =====================================================
+VIDEO OVERLAY
+===================================================== */
+
+.video-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0.05),
+            rgba(0, 0, 0, 0.65)
+        );
+
+    transition:
+        background 0.3s ease;
+
+    pointer-events: none;
+}
+
+/* =====================================================
+VIDEO TITLE
+===================================================== */
+
+.youtube-card .video-title {
+    position: absolute;
+
+    top: 15px;
+
+    left: 15px;
+
+    right: 15px;
+
+    transform: none;
+
+    width: auto;
+
+    text-align: left;
+
+    font-size: 19px;
+
+    z-index: 3;
+
+    color: white;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-weight: 700;
+
+    text-shadow:
+        0 2px 6px rgba(0, 0, 0, 0.9);
+}
+
+/* =====================================================
+PLAY BUTTON
+===================================================== */
+
+.youtube-card .play-btn,
+.video-card .play-btn {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    transform:
+        translate(-50%, -50%);
+
+    width: 62px;
+    height: 44px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #ff0000;
+
+    border-radius: 12px;
+
+    z-index: 5;
+
+    box-shadow:
+        0 5px 20px
+        rgba(0, 0, 0, 0.45);
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+/* =====================================================
+PLAY BUTTON TRIANGLE
+===================================================== */
+
+.video-card .play-btn::before,
+.youtube-card .play-btn::before {
+    content: "";
+
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    transform:
+        translate(-35%, -50%);
+
+    border-style: solid;
+
+    border-width:
+        9px 0 9px 15px;
+
+    border-color:
+        transparent
+        transparent
+        transparent
+        white;
+}
+
+/* =====================================================
+VIDEO HOVER
+===================================================== */
+
+.youtube-card:hover {
+    transform:
+        translateY(-8px)
+        scale(1.02);
+}
+
+.youtube-card:hover .thumbnail img {
+    transform: scale(1.04);
+}
+
+.video-card:hover .thumbnail img {
+    transform: scale(1.03);
+}
+
+.youtube-card:hover .video-overlay {
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0.1),
+            rgba(0, 0, 0, 0.75)
+        );
+}
+
+.youtube-card:hover .play-btn,
+.video-card:hover .play-btn {
+    transform:
+        translate(-50%, -50%)
+        scale(1.12);
+
+    background: #ff0000;
+
+    box-shadow:
+        0 0 25px
+        rgba(255, 0, 0, 0.45);
+}
+
+/* =====================================================
+VIDEO LABEL
+===================================================== */
+
+.youtube-card .video-label {
+    color: #c8ceda;
+
+    transition:
+        color 0.3s ease;
+}
+
+.youtube-card:hover .video-label {
+    color: #ffffff;
+}
+
+/* =====================================================
+VIDEO CARD LABEL
+===================================================== */
+
+.video-card .video-label {
+    display: block;
+
+    padding:
+        12px 14px 15px;
+
+    color: #c8ceda;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    text-align: center;
+}
+
+/* =====================================================
+GRADE 12 PHYSICS UNITS
+===================================================== */
+
+.unit {
+    width: 100%;
+
+    max-width: 1100px;
+
+    margin: 0 auto 25px;
+
+    text-align: left;
+}
+
+/* =====================================================
+UNIT TOGGLE BUTTON
+===================================================== */
+
+.unit-toggle {
+    width: 100%;
+
+    padding: 16px 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    text-align: left;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 17px;
+
+    font-weight: 700;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            135deg,
+            #1e3c72,
+            #2a5298
+        );
+
+    border: none;
+
+    border-radius: 12px;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        background 0.3s ease;
+}
+
+.unit-toggle:hover {
+    transform: translateY(-2px);
+
+    background:
+        linear-gradient(
+            135deg,
+            #234b8e,
+            #315fa8
+        );
+
+    box-shadow:
+        0 8px 20px
+        rgba(79, 140, 255, 0.2);
+}
+
+/* =====================================================
+UNIT CONTENT
+===================================================== */
+
+.unit-content {
+    display: none;
+
+    width: 100%;
+
+    padding: 25px 5px 10px;
+
+    animation:
+        unitOpen 0.35s ease;
+}
+
+.unit-content.active {
+    display: block;
+}
+
+@keyframes unitOpen {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(-8px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+}
+
+/* =====================================================
+UNIT SECTION HEADINGS
+===================================================== */
+
+.unit-content h2 {
+    margin:
+        25px 0 15px;
+
+    padding-left: 12px;
+
+    border-left:
+        4px solid #4f8cff;
+
+    color: #ffffff;
+
+    font-family:
+        'Poppins',
+        sans-serif;
+
+    font-size: 20px;
+
+    font-weight: 600;
+
+    text-align: left;
+}
+
+/* =====================================================
+UNIT GLOW
+===================================================== */
+
+.glow {
+    box-shadow:
+        0 0 12px
+        rgba(0, 114, 255, 0.45),
+
+        0 0 25px
+        rgba(0, 114, 255, 0.2);
+
+    animation:
+        pulseGlow 2.5s infinite;
+}
+
+@keyframes pulseGlow {
+
+    0% {
+        box-shadow:
+            0 0 10px
+            rgba(0, 114, 255, 0.35),
+
+            0 0 20px
+            rgba(0, 114, 255, 0.15);
+    }
+
+    50% {
+        box-shadow:
+            0 0 18px
+            rgba(0, 114, 255, 0.7),
+
+            0 0 32px
+            rgba(0, 114, 255, 0.35);
+    }
+
+    100% {
+        box-shadow:
+            0 0 10px
+            rgba(0, 114, 255, 0.35),
+
+            0 0 20px
+            rgba(0, 114, 255, 0.15);
+    }
+}
+
+/* =====================================================
+EXTRA PRACTICE CARD
+===================================================== */
+
+.video-card.extra {
+    border:
+        1px solid rgba(255, 152, 0, 0.45);
+}
+
+.video-card.extra:hover {
+    border-color:
+        rgba(255, 152, 0, 0.9);
+
+    box-shadow:
+        0 12px 30px
+        rgba(255, 152, 0, 0.2);
+}
+
+.extra-label {
+    color: #ff9800;
+
+    font-weight: bold;
+
+    margin-bottom: 8px;
+}
+
+/* =====================================================
+CHEMISTRY PLACEHOLDER
+===================================================== */
+
+.chemistry-placeholder {
+    width: 100%;
+
+    height: 100%;
+
+    min-height: 180px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    font-size: 45px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #111827,
+            #1a237e,
+            #0d47a1
+        );
+
+    color: white;
+}
+
+.chemistry-placeholder span {
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 20px;
+
+    font-weight: 700;
+}
+
+/* =====================================================
+PLAYLIST SECTION
+===================================================== */
+
+.playlist-section {
+    text-align: center;
+
+    margin-top: 50px;
+
+    margin-bottom: 10px;
+}
+
+/* =====================================================
+PLAYLIST HINT
+===================================================== */
+
+.playlist-hint {
+    text-align: center;
+
+    font-size: 16px;
+
+    color: #ccc;
+
+    margin-bottom: 15px;
+
+    animation:
+        bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform:
+            translateY(0);
+    }
+
+    50% {
+        transform:
+            translateY(5px);
+    }
+}
+
+/* =====================================================
+PLAYLIST BOX
+===================================================== */
+
+.playlist-box {
+    width: 100%;
+
+    max-width: 900px;
+
+    margin: 0 auto;
+}
+
+.playlist-box iframe {
+    width: 100%;
+
+    height: 450px;
+
+    border: none;
+
+    border-radius: 14px;
+
+    box-shadow:
+        0 10px 30px
+        rgba(0, 0, 0, 0.25);
+}
+
+/* =====================================================
+SUBSCRIBE MESSAGE
+===================================================== */
+
+.subscribe-message {
+    max-width: 650px;
+
+    margin: 35px auto 25px;
+
+    padding: 25px 30px;
+
+    background:
+        rgba(79, 140, 255, 0.08);
+
+    border:
+        1px solid rgba(79, 140, 255, 0.18);
+
+    border-radius: 16px;
+
+    box-shadow:
+        0 10px 30px
+        rgba(0, 0, 0, 0.15);
+}
+
+.subscribe-message h3 {
+    margin-bottom: 8px;
+
+    font-family:
+        'Poppins',
+        sans-serif;
+
+    font-size: 21px;
+
+    color: #ffffff;
+}
+
+.subscribe-message p {
+    margin: 0;
+
+    color: #c8ceda;
+
+    font-size: 15px;
+
+    line-height: 1.7;
+}
+
+/* =====================================================
+CONTACT FORM
+===================================================== */
+
+form {
+    max-width: 450px;
+
+    margin: 30px auto 0;
+
+    display: flex;
+
+    flex-direction: column;
+}
+
+form input,
+form textarea {
+    width: 100%;
+
+    margin: 7px 0;
+
+    padding: 14px 15px;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.06);
+
+    border-radius: 8px;
+
+    background: #111827;
+
+    color: white;
+
+    resize: vertical;
+
+    transition:
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+form input:focus,
+form textarea:focus {
+    outline: none;
+
+    border-color: #4f8cff;
+
+    box-shadow:
+        0 0 0 2px
+        rgba(79, 140, 255, 0.12);
+}
+
+form button {
+    margin-top: 10px;
+
+    background: #4f8cff;
+
+    color: white;
+
+    padding: 13px;
+
+    border: none;
+
+    cursor: pointer;
+
+    border-radius: 8px;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+form button:hover {
+    background: #7384ad;
+
+    transform:
+        translateY(-2px);
+
+    box-shadow:
+        0 5px 15px
+        rgba(79, 140, 255, 0.4);
+}
+
+/* =====================================================
+START LEARNING / PLAYLIST BUTTON
+===================================================== */
+
+.playlist-btn {
+    background:
+        linear-gradient(
+            135deg,
+            #4f8cff,
+            #9333ea
+        );
+
+    color: white;
+
+    padding:
+        14px 28px;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    border: none;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 0 15px
+        rgba(79, 140, 255, 0.6);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+
+    animation:
+        pulse 1.8s infinite;
+}
+
+.playlist-btn:hover {
+    transform:
+        scale(1.08);
+
+    box-shadow:
+        0 0 30px
+        rgba(79, 140, 255, 1);
+}
+
+/* =====================================================
+BUTTON PULSE
+===================================================== */
+
+@keyframes pulse {
+
+    0% {
+        box-shadow:
+            0 0 10px
+            rgba(79, 140, 255, 0.6);
+    }
+
+    50% {
+        box-shadow:
+            0 0 25px
+            rgba(79, 140, 255, 1);
+    }
+
+    100% {
+        box-shadow:
+            0 0 10px
+            rgba(79, 140, 255, 0.6);
+    }
+}
+
+/* =====================================================
+FOOTER
+===================================================== */
+
+footer {
+    padding:
+        25px 20px;
+
+    text-align: center;
+
+    background: #05070f;
+
+    color: #777;
+
+    border-top:
+        1px solid rgba(255, 255, 255, 0.05);
+}
+
+footer p {
+    margin:
+        4px 0;
+
+    font-size: 13px;
+}
+
+/* =====================================================
+RESPONSIVE - TABLET
+===================================================== */
+
+@media (max-width: 900px) {
+
+    nav {
+        margin-right: 30px;
+    }
+
+    .navbar {
+        padding:
+            10px 25px;
+    }
+
+    .hero {
+        min-height: auto;
+
+        padding:
+            80px 20px 90px;
+    }
+
+    .videos-grid {
+        grid-template-columns:
+            repeat(
+                2,
+                minmax(0, 1fr)
+            );
+
+        gap: 20px;
+    }
+}
+
+/* =====================================================
+RESPONSIVE - MOBILE
+===================================================== */
+
+@media (max-width: 700px) {
+
+    .navbar {
+        padding:
+            10px 15px;
+    }
+
+    nav {
+        margin-right: 0;
+    }
+
+    nav a,
+    .dropbtn {
+        margin-left: 10px;
+
+        font-size: 14px;
+    }
+
+    .logo {
+        font-size: 18px;
+    }
+
+    .logo img {
+        width: 42px;
+        height: 42px;
+    }
+
+    /* =================================================
+    MOBILE MAIN DROPDOWN
+    ================================================= */
+
+    .dropdown {
+        padding-bottom: 8px;
+        margin-bottom: -8px;
+    }
+
+    .dropdown-content {
+        top: 100%;
+
+        left: auto;
+        right: 0;
+
+        min-width: 200px;
+
+        max-width:
+            calc(100vw - 30px);
+    }
+
+    /*
+    Mobile submenu opens underneath
+    instead of beside it.
+    */
+
+    .sub-dropdown-content {
+        position: static;
+
+        display: none;
+
+        margin-left: 15px;
+
+        margin-top: 3px;
+
+        min-width: auto;
+
+        box-shadow: none;
+
+        border:
+            1px solid
+            rgba(255, 255, 255, 0.05);
+    }
+
+    .sub-dropdown:hover > .sub-dropdown-content {
+        display: block;
+    }
+
+    .sub-dropdown:focus-within > .sub-dropdown-content {
+        display: block;
+    }
+
+    /* =================================================
+    MOBILE HERO
+    ================================================= */
+
+    .hero-actions {
+        flex-direction: column;
+
+        align-items: center;
+    }
+
+    .action-tile {
+        width:
+            min(92vw, 390px);
+    }
+
+    /* =================================================
+    MOBILE SECTIONS
+    ================================================= */
+
+    .section {
+        padding:
+            60px 7%;
+    }
+
+    /* =================================================
+    MOBILE VIDEOS
+    ================================================= */
+
+    .videos-grid {
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+    }
+
+    /* =================================================
+    MOBILE PHYSICS UNITS
+    ================================================= */
+
+    .unit-toggle {
+        padding:
+            15px 16px;
+
+        font-size: 15px;
+    }
+
+    .unit-content {
+        padding:
+            20px 0 10px;
+    }
+
+    .unit-content h2 {
+        font-size: 18px;
+    }
+
+    /* =================================================
+    MOBILE FEATURED VIDEO
+    ================================================= */
+
+    .video-thumbnail {
+        width: 120px;
+        height: 72px;
+    }
+}
+
+/* =====================================================
+RESPONSIVE - SMALL MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .playlist-box iframe {
+        height: 300px;
+    }
+
+    .videos-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .thumbnail {
+        aspect-ratio: 16 / 9;
+    }
+}
+
+/* =====================================================
+RESPONSIVE - VERY SMALL SCREENS
+===================================================== */
+
+@media (max-width: 450px) {
+
+    .hero {
+        padding:
+            60px 15px 70px;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .hero-actions {
+        gap: 15px;
+    }
+
+    .action-tile {
+        padding: 15px;
+
+        min-height: 100px;
+    }
+
+    .action-icon {
+        width: 48px;
+        height: 48px;
+    }
+
+    .video-thumbnail {
+        width: 105px;
+        height: 68px;
+    }
+
+    .video-info h3 {
+        font-size: 15px;
+    }
+
+    .video-info p {
+        font-size: 12px;
+    }
+
+    .section h2 {
+        font-size: 27px;
+    }
+
+    .unit-toggle {
+        font-size: 14px;
+
+        padding:
+            14px 13px;
+    }
+
+    .dropdown-content {
+        min-width: 185px;
+    }
+
+    .sub-dropdown-content a,
+    .dropdown-content > .sub-dropdown > a {
+        font-size: 13px;
+    }
+}
+
+
+/* =====================================================
+SUBJECT DROPDOWN - CLICK FIX
+===================================================== */
+
+/* Main dropdown opens when clicked */
+.dropdown.active > .dropdown-content {
+    display: block;
+}
+
+/* Submenu opens when clicked */
+.sub-dropdown.active > .sub-dropdown-content {
+    display: block;
+}
+
+/* Keep submenu open while hovering */
+.sub-dropdown:hover > .sub-dropdown-content {
+    display: block;
+}
+
+/* Keep main dropdown open while hovering */
+.dropdown:hover > .dropdown-content {
+    display: block;
+}

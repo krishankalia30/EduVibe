@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grade 11 Math</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Inter:wght@300;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- NAVBAR (same as homepage for consistency) -->
+<header class="navbar">
+  <div class="logo">
+    <img src="logo.png">
+    <p>EduVibe</p>
+  </div>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="index.html#videos">Videos</a>
+    <a href="index.html#contact">Contact</a>
+  </nav>
+</header>
+
+<!-- TITLE -->
+<section class="section">
+  <h2>📘 Grade 11 Math</h2>
+  <p>Learn key concepts with simple and clear videos.</p>
+</section>
+
+<!-- PLAYLIST BUTTON -->
+<section class="section">
+
+  <h2>📘 Grade 11 Math Full Playlist</h2>
+
+  <!-- Button -->
+ <p class="playlist-hint">👇 Click here to watch full playlist</p>
+
+<a href="https://youtube.com/playlist?list=PLx3Bk-0t68Uex0eFTO_m94P2sKEtGAiKB" target="_blank">
+  <button class="playlist-btn">📺 Watch Full Playlist 🔥</button>
+</a>
+
+  <!-- Embedded Playlist -->
+  <div class="playlist-box">
+  <iframe 
+    src="https://www.youtube.com/embed/videoseries?list=PLx3Bk-0t68Uex0eFTO_m94P2sKEtGAiKB"
+    frameborder="0"
+    allowfullscreen>
+  </iframe>
+</div>
+
+</section>
+
+<!-- VIDEOS -->
+<section class="section">
+  <h2>🎥 Video Lessons</h2>
+
+  <div class="videos-grid">
+
+    <div class="video-card" onclick="openVideo(this, 'M7HIXyQYKP4')">
+      <div class="thumbnail">
+        <img src="https://img.youtube.com/vi/M7HIXyQYKP4/hqdefault.jpg">
+        <div class="play-btn"></div>
+      </div>
+    </div>
+
+    <div class="video-card" onclick="openVideo(this, '87BVyU2N-Zw')">
+      <div class="thumbnail">
+        <img src="https://img.youtube.com/vi/87BVyU2N-Zw/hqdefault.jpg">
+        <div class="play-btn"></div>
+      </div>
+    </div>
+
+    <div class="video-card" onclick="openVideo(this, 'ITKehoUa_-k')">
+      <div class="thumbnail">
+        <img src="https://img.youtube.com/vi/ITKehoUa_-k/hqdefault.jpg">
+        <div class="play-btn"></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="section">
+  <h2>📚 Course Content</h2>
+
+  <!-- UNIT 1 -->
+  <div class="unit">
+    <h3>📗 Unit 1: Quadratics</h3>
+
+    <div class="videos-grid">
+
+      <div class="video-card" onclick="openVideo(this, 'M7HIXyQYKP4')">
+        <div class="thumbnail">
+          <img src="https://img.youtube.com/vi/M7HIXyQYKP4/hqdefault.jpg" alt="Quadratics Video 1">
+          <div class="play-btn"></div>
+        </div>
+      </div>
+
+      <div class="video-card" onclick="openVideo(this, '87BVyU2N-Zw')">
+        <div class="thumbnail">
+          <img src="https://img.youtube.com/vi/87BVyU2N-Zw/hqdefault.jpg" alt="Quadratics Video 2">
+          <div class="play-btn"></div>
+        </div>
+      </div>
+
+      <div class="video-card" onclick="openVideo(this, 'Efi-w6f8z8c')">
+        <div class="thumbnail">
+          <img src="https://img.youtube.com/vi/Efi-w6f8z8c/hqdefault.jpg" alt="Quadratics Video 3">
+          <div class="play-btn"></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- UNIT 2 -->
+  <div class="unit">
+    <h3>📘 Unit 2: Inequalities</h3>
+
+    <div class="videos-grid">
+
+      <div class="video-card" onclick="openVideo(this, 'gPHNGmwP3vQ')">
+        <div class="thumbnail">
+          <img src="https://img.youtube.com/vi/gPHNGmwP3vQ/hqdefault.jpg" alt="Inequalities Video 1">
+          <div class="play-btn"></div>
+        </div>
+      </div>
+
+      <div class="video-card" onclick="openVideo(this, 'J3VNvw_JLeY')">
+        <div class="thumbnail">
+          <img src="https://img.youtube.com/vi/J3VNvw_JLeY/hqdefault.jpg" alt="Inequalities Video 2">
+          <div class="play-btn"></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- UNIT 3 -->
+  <div class="unit">
+    <h3>📙 Unit 3: Trigonometry</h3>
+
+    <div class="videos-grid">
+
+      <div class="video-card" onclick="openVideo(this, 'eFwLfKY0Zqk')">
+        <div class="thumbnail">
+          <img src="https://img.youtube.com/vi/eFwLfKY0Zqk/hqdefault.jpg" alt="Trigonometry Video 1">
+          <div class="play-btn"></div>
+        </div>
+      </div>
+
+      <div class="video-card" onclick="openVideo(this, 'fE7BnxdIGKg')">
+        <div class="thumbnail">
+          <img src="https://img.youtube.com/vi/fE7BnxdIGKg/hqdefault.jpg" alt="Trigonometry Video 2">
+          <div class="play-btn"></div>
+        </div>
+      </div>
+
+      <div class="video-card" onclick="openVideo(this, 'VA4OY5jLhqA')">
+        <div class="thumbnail">
+          <img src="https://img.youtube.com/vi/VA4OY5jLhqA/hqdefault.jpg" alt="Trigonometry Video 3">
+          <div class="play-btn"></div>
+        </div>
+      </div>
+
+      <div class="video-card" onclick="openVideo(this, 'ITKehoUa_-k')">
+        <div class="thumbnail">
+          <img src="https://img.youtube.com/vi/ITKehoUa_-k/hqdefault.jpg" alt="Trigonometry Video 4">
+          <div class="play-btn"></div>
+        </div>
+      </div>
+
+      <div class="video-card" onclick="openVideo(this, 'Ogm8i3fZYzM')">
+        <div class="thumbnail">
+          <img src="https://img.youtube.com/vi/Ogm8i3fZYzM/hqdefault.jpg" alt="Trigonometry Video 5">
+          <div class="play-btn"></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="unit">
+    <h3>📗 Unit 4: Radicals</h3>
+    <div class="videos-grid">
+      <div class="video-card" onclick="openVideo(this, 'vy6pV-BZ-eM')">
+        <div class="thumbnail">
+          <img src="https://img.youtube.com/vi/vy6pV-BZ-eM/hqdefault.jpg" alt="Trigonometry Video 1">
+          <div class="play-btn"></div>
+        </div>
+      </div>
+
+      <div class="video-card" onclick="openVideo(this, '6OtvgzEzc68')">
+        <div class="thumbnail">
+          <img src="https://img.youtube.com/vi/6OtvgzEzc68/hqdefault.jpg" alt="Trigonometry Video 1">
+          <div class="play-btn"></div>
+        </div>
+      </div>
+
+      <div class="video-card" onclick="openVideo(this, '0xytyspB-xY')">
+        <div class="thumbnail">
+          <img src="https://img.youtube.com/vi/0xytyspB-xY/hqdefault.jpg" alt="Trigonometry Video 1">
+          <div class="play-btn"></div>
+        </div>
+      </div>
+
+      <div class="video-card" onclick="openVideo(this, '-sBj-QUXaDw')">
+        <div class="thumbnail">
+          <img src="https://img.youtube.com/vi/-sBj-QUXaDw/hqdefault.jpg" alt="Trigonometry Video 1">
+          <div class="play-btn"></div>
+        </div>
+      </div>
+
+      <div class="video-card" onclick="openVideo(this, 'aynJ4cieVLE')">
+        <div class="thumbnail">
+          <img src="https://img.youtube.com/vi/aynJ4cieVLE/hqdefault.jpg" alt="Trigonometry Video 1">
+          <div class="play-btn"></div>
+        </div>
+      </div>
+
+      <div class="video-card" onclick="openVideo(this, '7iZo05WsP0M')">
+        <div class="thumbnail">
+          <img src="https://img.youtube.com/vi/7iZo05WsP0M/hqdefault.jpg" alt="Trigonometry Video 1">
+          <div class="play-btn"></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="unit">
+    <h3>📘 Unit 5: Rationals</h3>
+    <div class="videos-grid">
+      <div class="video-card" onclick="openVideo(this, 'mHier003a6U')">
+        <div class="thumbnail">
+          <img src="https://img.youtube.com/vi/mHier003a6U/hqdefault.jpg" alt="Trigonometry Video 1">
+          <div class="play-btn"></div>
+        </div>
+      </div>
+
+      <div class="video-card" onclick="openVideo(this, 'YjkSEWuniDU')">
+        <div class="thumbnail">
+          <img src="https://img.youtube.com/vi/YjkSEWuniDU/hqdefault.jpg" alt="Trigonometry Video 1">
+          <div class="play-btn"></div>
+        </div>
+      </div>
+
+      <div class="video-card" onclick="openVideo(this, 'dis6Lh_fV-8')">
+        <div class="thumbnail">
+          <img src="https://img.youtube.com/vi/dis6Lh_fV-8/hqdefault.jpg" alt="Trigonometry Video 1">
+          <div class="play-btn"></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="unit">
+    <h3>📙 Unit 6: Sequences & Series</h3>
+
+    <div class="videos-grid">
+      <div class="video-card" onclick="openVideo(this, 'lbbdEXfc1Kc')">
+        <div class="thumbnail">
+          <img src="https://img.youtube.com/vi/lbbdEXfc1Kc/hqdefault.jpg" alt="Trigonometry Video 1">
+          <div class="play-btn"></div>
+        </div>
+      </div>
+
+      <div class="video-card" onclick="openVideo(this, 'YKI6LpQQ5Yo')">
+        <div class="thumbnail">
+          <img src="https://img.youtube.com/vi/YKI6LpQQ5Yo/hqdefault.jpg" alt="Trigonometry Video 1">
+          <div class="play-btn"></div>
+        </div>
+      </div>
+
+      <div class="video-card" onclick="openVideo(this, '12lhUcdxQAw')">
+        <div class="thumbnail">
+          <img src="https://img.youtube.com/vi/12lhUcdxQAw/hqdefault.jpg" alt="Trigonometry Video 1">
+          <div class="play-btn"></div>
+        </div>
+      </div>
+
+      <div class="video-card" onclick="openVideo(this, 't-4JvmbEmH0')">
+        <div class="thumbnail">
+          <img src="https://img.youtube.com/vi/t-4JvmbEmH0/hqdefault.jpg" alt="Trigonometry Video 1">
+          <div class="play-btn"></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 Eduvibe</p>
+</footer>
+
+<!-- SCRIPT -->
+<script>
+function openVideo(card, id) {
+  card.innerHTML = `
+    <iframe 
+      width="100%" 
+      height="100%" 
+      src="https://www.youtube.com/embed/${id}?autoplay=1"
+      frameborder="0"
+      allowfullscreen>
+    </iframe>
+  `;
+}
+</script>
+
+<!-- 🎬 VIDEO MODAL -->
+<div id="videoModal" class="modal">
+  <span class="close" onclick="closeVideo()">×</span>
+  <iframe id="videoFrame" frameborder="0" allowfullscreen></iframe>
+
+</div>
+</body>
+</html>
