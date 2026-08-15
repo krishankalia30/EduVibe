@@ -177,16 +177,26 @@
 
 <!-- =====================================================
      NAVBAR
-===================================================== -->
+====================================================== -->
 
 <header class="navbar">
 
+
+  <!-- ================= LOGO ================= -->
+
   <div class="logo">
 
-    <img
-      src="logo.png"
-      alt="EduVibe educational learning platform logo"
+    <a
+      href="index.html"
+      aria-label="EduVibe Home"
     >
+
+      <img
+        src="logo.png"
+        alt="EduVibe educational learning platform logo"
+      >
+
+    </a>
 
     <p>
       EduVibe
@@ -195,23 +205,232 @@
   </div>
 
 
-  <nav>
+  <!-- ================= NAVIGATION ================= -->
+
+  <nav aria-label="Main navigation">
+
+
+    <!-- ================= HOME ================= -->
 
     <a href="index.html">
       Home
     </a>
 
+
+
+    <!-- =================================================
+         SUBJECTS DROPDOWN
+    ================================================== -->
+
+    <div
+      class="dropdown"
+      id="subjectsDropdown"
+    >
+
+
+      <!-- SUBJECTS BUTTON -->
+
+      <button
+        class="dropbtn"
+        id="subjectsButton"
+        type="button"
+        aria-haspopup="true"
+        aria-expanded="false"
+      >
+
+        Subjects
+
+        <span class="dropdown-arrow">
+          ▾
+        </span>
+
+      </button>
+
+
+
+      <!-- ================= SUBJECTS MENU ================= -->
+
+      <div
+        class="dropdown-content"
+        id="subjectsMenu"
+      >
+
+
+        <!-- =================================================
+             MATHEMATICS
+        ================================================== -->
+
+        <div class="sub-dropdown">
+
+
+          <a
+            href="#"
+            class="submenu-trigger"
+            aria-haspopup="true"
+          >
+
+            <span>
+              Mathematics
+            </span>
+
+            <span>
+              ▸
+            </span>
+
+          </a>
+
+
+
+          <!-- MATHEMATICS GRADES -->
+
+          <div class="sub-dropdown-content">
+
+
+            <a href="math11.html">
+              Grade 11 Math
+            </a>
+
+
+            <a href="math12.html">
+              Grade 12 Math
+            </a>
+
+
+            <a href="calculus.html">
+              Calculus
+            </a>
+
+
+          </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+             PHYSICS
+        ================================================== -->
+
+        <div class="sub-dropdown">
+
+
+          <a
+            href="#"
+            class="submenu-trigger"
+            aria-haspopup="true"
+          >
+
+            <span>
+              Physics
+            </span>
+
+            <span>
+              ▸
+            </span>
+
+          </a>
+
+
+
+          <!-- PHYSICS GRADES -->
+
+          <div class="sub-dropdown-content">
+
+
+            <a href="physics11.html">
+              Grade 11 Physics
+            </a>
+
+
+            <a href="physics12.html">
+              Grade 12 Physics
+            </a>
+
+
+          </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+             CHEMISTRY
+        ================================================== -->
+
+        <div class="sub-dropdown">
+
+
+          <a
+            href="#"
+            class="submenu-trigger"
+            aria-haspopup="true"
+          >
+
+            <span>
+              Chemistry
+            </span>
+
+            <span>
+              ▸
+            </span>
+
+          </a>
+
+
+
+          <!-- CHEMISTRY GRADES -->
+
+          <div class="sub-dropdown-content">
+
+
+            <a href="chem11.html">
+              Grade 11 Chemistry
+            </a>
+
+
+            <a href="chem12.html">
+              Grade 12 Chemistry
+            </a>
+
+
+          </div>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+
+
+    <!-- ================= LEARNING ================= -->
+
     <a href="index.html#videos">
-      Videos
+      Learning
     </a>
+
+
+
+    <!-- ================= ABOUT ================= -->
+
+    <a href="index.html#about">
+      About
+    </a>
+
+
+
+    <!-- ================= CONTACT ================= -->
 
     <a href="index.html#contact">
       Contact
     </a>
 
+
   </nav>
 
 </header>
+
 
 
 <!-- =====================================================
@@ -936,7 +1155,7 @@
 
 
 <!-- =====================================================
-     SCRIPT
+     VIDEO SCRIPT
 ===================================================== -->
 
 <script>
@@ -957,6 +1176,202 @@ function openVideo(card, id) {
 
 }
 
+
+/* =====================================================
+   VIDEO MODAL CLOSE FUNCTION
+===================================================== */
+
+function closeVideo() {
+
+  const modal = document.getElementById("videoModal");
+  const frame = document.getElementById("videoFrame");
+
+  if (modal) {
+    modal.style.display = "none";
+  }
+
+  if (frame) {
+    frame.src = "";
+  }
+
+}
+
+</script>
+
+
+<!-- =====================================================
+     SUBJECTS DROPDOWN JAVASCRIPT
+====================================================== -->
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+
+  const dropdown =
+    document.getElementById("subjectsDropdown");
+
+
+  const button =
+    document.getElementById("subjectsButton");
+
+
+  const menu =
+    document.getElementById("subjectsMenu");
+
+
+  const submenuTriggers =
+    document.querySelectorAll(".submenu-trigger");
+
+
+
+  /* =================================================
+     MAIN SUBJECTS BUTTON
+  ================================================== */
+
+  button.addEventListener("click", function (event) {
+
+    event.stopPropagation();
+
+
+    const isOpen =
+      dropdown.classList.contains("active");
+
+
+    if (!isOpen) {
+
+      dropdown.classList.add("active");
+
+      button.setAttribute(
+        "aria-expanded",
+        "true"
+      );
+
+    }
+
+    else {
+
+      dropdown.classList.remove("active");
+
+      button.setAttribute(
+        "aria-expanded",
+        "false"
+      );
+
+
+      document
+        .querySelectorAll(".sub-dropdown.active")
+        .forEach(function (item) {
+
+          item.classList.remove("active");
+
+        });
+
+    }
+
+  });
+
+
+
+  /* =================================================
+     MATHEMATICS / PHYSICS / CHEMISTRY
+  ================================================== */
+
+  submenuTriggers.forEach(function (trigger) {
+
+
+    trigger.addEventListener(
+      "click",
+      function (event) {
+
+        event.preventDefault();
+
+        event.stopPropagation();
+
+
+        const parent =
+          trigger.closest(".sub-dropdown");
+
+
+        /* Close other submenus */
+
+        document
+          .querySelectorAll(".sub-dropdown.active")
+          .forEach(function (item) {
+
+            if (item !== parent) {
+
+              item.classList.remove("active");
+
+            }
+
+          });
+
+
+        /* Toggle selected submenu */
+
+        parent.classList.toggle("active");
+
+      }
+    );
+
+
+  });
+
+
+
+  /* =================================================
+     CLOSE WHEN CLICKING OUTSIDE
+  ================================================== */
+
+  document.addEventListener(
+    "click",
+    function (event) {
+
+
+      if (!dropdown.contains(event.target)) {
+
+
+        dropdown.classList.remove("active");
+
+
+        button.setAttribute(
+          "aria-expanded",
+          "false"
+        );
+
+
+        document
+          .querySelectorAll(".sub-dropdown.active")
+          .forEach(function (item) {
+
+            item.classList.remove("active");
+
+          });
+
+      }
+
+    }
+  );
+
+
+
+  /* =================================================
+     KEEP DROPDOWN OPEN WHEN CLICKING INSIDE
+  ================================================== */
+
+  menu.addEventListener(
+    "click",
+    function (event) {
+
+      event.stopPropagation();
+
+    }
+  );
+
+
+});
+
 </script>
 
 
@@ -967,19 +1382,21 @@ function openVideo(card, id) {
 <div
   id="videoModal"
   class="modal"
+  aria-hidden="true"
 >
 
   <span
     class="close"
     onclick="closeVideo()"
+    aria-label="Close video"
   >
     ×
   </span>
 
   <iframe
     id="videoFrame"
-    title="EduVibe Mathematics Video"
     frameborder="0"
+    title="EduVibe Mathematics Video"
     allowfullscreen>
   </iframe>
 
@@ -989,4 +1406,3 @@ function openVideo(card, id) {
 </body>
 
 </html>
-
