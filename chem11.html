@@ -38,14 +38,6 @@
        CANONICAL URL
   ====================================================== -->
 
-  <!--
-    IMPORTANT:
-    Replace this URL with the actual URL of your Grade 11 Chemistry page.
-
-    Example:
-    https://krishankalia30.github.io/EduVibe/chem11.html
-  -->
-
   <link
     rel="canonical"
     href="https://krishankalia30.github.io/EduVibe/chem11.html"
@@ -54,8 +46,6 @@
 
   <!-- =====================================================
        OPEN GRAPH SEO
-       Used when the page is shared on Facebook,
-       Messenger, LinkedIn, etc.
   ====================================================== -->
 
   <meta property="og:type" content="website">
@@ -76,12 +66,6 @@
   >
 
   <meta property="og:site_name" content="EduVibe">
-
-  <!--
-    If you have a social sharing image, you can add:
-
-    <meta property="og:image" content="https://krishankalia30.github.io/EduVibe/chemistry-preview.jpg">
-  -->
 
 
   <!-- =====================================================
@@ -120,7 +104,6 @@
 
   <!-- =====================================================
        STRUCTURED DATA - EDUCATIONAL COURSE
-       Helps Google understand the page.
   ====================================================== -->
 
   <script type="application/ld+json">
@@ -179,9 +162,15 @@
 
 <header class="navbar">
 
+
+  <!-- ================= LOGO ================= -->
+
   <div class="logo">
 
-    <a href="index.html" aria-label="EduVibe Home">
+    <a
+      href="index.html"
+      aria-label="EduVibe Home"
+    >
 
       <img
         src="logo.png"
@@ -190,18 +179,234 @@
 
     </a>
 
-    <p>EduVibe</p>
+    <p>
+      EduVibe
+    </p>
 
   </div>
 
 
+  <!-- ================= NAVIGATION ================= -->
+
   <nav aria-label="Main navigation">
 
-    <a href="index.html">Home</a>
 
-    <a href="index.html#videos">Videos</a>
+    <!-- ================= HOME ================= -->
 
-    <a href="index.html#contact">Contact</a>
+    <a href="index.html">
+      Home
+    </a>
+
+
+
+    <!-- =================================================
+         SUBJECTS DROPDOWN
+    ================================================== -->
+
+    <div
+      class="dropdown"
+      id="subjectsDropdown"
+    >
+
+
+      <!-- SUBJECTS BUTTON -->
+
+      <button
+        class="dropbtn"
+        id="subjectsButton"
+        type="button"
+        aria-haspopup="true"
+        aria-expanded="false"
+      >
+
+        Subjects
+
+        <span class="dropdown-arrow">
+          ▾
+        </span>
+
+      </button>
+
+
+
+      <!-- ================= SUBJECTS MENU ================= -->
+
+      <div
+        class="dropdown-content"
+        id="subjectsMenu"
+      >
+
+
+        <!-- =================================================
+             MATHEMATICS
+        ================================================== -->
+
+        <div class="sub-dropdown">
+
+
+          <a
+            href="#"
+            class="submenu-trigger"
+            aria-haspopup="true"
+          >
+
+            <span>
+              Mathematics
+            </span>
+
+            <span>
+              ▸
+            </span>
+
+          </a>
+
+
+
+          <!-- MATHEMATICS GRADES -->
+
+          <div class="sub-dropdown-content">
+
+
+            <a href="math11.html">
+              Grade 11 Math
+            </a>
+
+
+            <a href="math12.html">
+              Grade 12 Math
+            </a>
+
+
+            <a href="calculus.html">
+              Calculus
+            </a>
+
+
+          </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+             PHYSICS
+        ================================================== -->
+
+        <div class="sub-dropdown">
+
+
+          <a
+            href="#"
+            class="submenu-trigger"
+            aria-haspopup="true"
+          >
+
+            <span>
+              Physics
+            </span>
+
+            <span>
+              ▸
+            </span>
+
+          </a>
+
+
+
+          <!-- PHYSICS GRADES -->
+
+          <div class="sub-dropdown-content">
+
+
+            <a href="physics11.html">
+              Grade 11 Physics
+            </a>
+
+
+            <a href="physics12.html">
+              Grade 12 Physics
+            </a>
+
+
+          </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+             CHEMISTRY
+        ================================================== -->
+
+        <div class="sub-dropdown">
+
+
+          <a
+            href="#"
+            class="submenu-trigger"
+            aria-haspopup="true"
+          >
+
+            <span>
+              Chemistry
+            </span>
+
+            <span>
+              ▸
+            </span>
+
+          </a>
+
+
+
+          <!-- CHEMISTRY GRADES -->
+
+          <div class="sub-dropdown-content">
+
+
+            <a href="chem11.html">
+              Grade 11 Chemistry
+            </a>
+
+
+            <a href="chem12.html">
+              Grade 12 Chemistry
+            </a>
+
+
+          </div>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+
+
+    <!-- ================= LEARNING ================= -->
+
+    <a href="index.html#videos">
+      Learning
+    </a>
+
+
+
+    <!-- ================= ABOUT ================= -->
+
+    <a href="index.html#about">
+      About
+    </a>
+
+
+
+    <!-- ================= CONTACT ================= -->
+
+    <a href="index.html#contact">
+      Contact
+    </a>
+
 
   </nav>
 
@@ -222,7 +427,9 @@
 
 <section class="section">
 
-  <h1>📘 Grade 11 Chemistry</h1>
+  <h1>
+    📘 Grade 11 Chemistry
+  </h1>
 
   <p>
     Learn Grade 11 Chemistry with simple and clear video lessons.
@@ -240,7 +447,9 @@
 
 <section class="section">
 
-  <h2>📘 Grade 11 Chemistry Full Playlist</h2>
+  <h2>
+    📘 Grade 11 Chemistry Full Playlist
+  </h2>
 
   <p>
     Watch the complete Grade 11 Chemistry playlist to study
@@ -264,13 +473,16 @@
       class="playlist-btn"
       type="button"
     >
+
       📺 Watch Full Playlist 🔥
+
     </button>
 
   </a>
 
 
-  <!-- Embedded Playlist -->
+
+  <!-- ================= EMBEDDED PLAYLIST ================= -->
 
   <div class="playlist-box">
 
@@ -295,7 +507,9 @@
 
 <section class="section">
 
-  <h2>📚 Grade 11 Chemistry Course Content</h2>
+  <h2>
+    📚 Grade 11 Chemistry Course Content
+  </h2>
 
 
   <!-- ===================================================
@@ -304,13 +518,15 @@
 
   <div class="unit">
 
-    <h3>📗 Unit A: Matter &amp; Ionic Bonding</h3>
+    <h3>
+      📗 Unit A: Matter &amp; Ionic Bonding
+    </h3>
 
 
     <div class="videos-grid">
 
 
-      <!-- Video 1 -->
+      <!-- ================= VIDEO 1 ================= -->
 
       <div
         class="video-card"
@@ -339,7 +555,7 @@
 
 
 
-      <!-- Video 2 -->
+      <!-- ================= VIDEO 2 ================= -->
 
       <div
         class="video-card"
@@ -368,7 +584,7 @@
 
 
 
-      <!-- Video 3 -->
+      <!-- ================= VIDEO 3 ================= -->
 
       <div
         class="video-card"
@@ -397,7 +613,7 @@
 
 
 
-      <!-- Video 4 -->
+      <!-- ================= VIDEO 4 ================= -->
 
       <div
         class="video-card"
@@ -426,7 +642,7 @@
 
 
 
-      <!-- Video 5 -->
+      <!-- ================= VIDEO 5 ================= -->
 
       <div
         class="video-card"
@@ -455,7 +671,7 @@
 
 
 
-      <!-- Video 6 -->
+      <!-- ================= VIDEO 6 ================= -->
 
       <div
         class="video-card"
@@ -484,7 +700,7 @@
 
 
 
-      <!-- Video 7 -->
+      <!-- ================= VIDEO 7 ================= -->
 
       <div
         class="video-card"
@@ -513,7 +729,7 @@
 
 
 
-      <!-- Video 8 -->
+      <!-- ================= VIDEO 8 ================= -->
 
       <div
         class="video-card"
@@ -542,7 +758,7 @@
 
 
 
-      <!-- Video 9 -->
+      <!-- ================= VIDEO 9 ================= -->
 
       <div
         class="video-card"
@@ -571,7 +787,7 @@
 
 
 
-      <!-- Video 10 -->
+      <!-- ================= VIDEO 10 ================= -->
 
       <div
         class="video-card"
@@ -600,7 +816,7 @@
 
 
 
-      <!-- EXTRA PRACTICE -->
+      <!-- ================= EXTRA PRACTICE ================= -->
 
       <div
         class="video-card extra"
@@ -681,7 +897,9 @@ function openVideo(card, id) {
 }
 
 
-/* Keyboard accessibility */
+/* =====================================================
+   KEYBOARD ACCESSIBILITY
+===================================================== */
 
 function handleVideoKey(event, card, id) {
 
@@ -694,6 +912,183 @@ function handleVideoKey(event, card, id) {
   }
 
 }
+
+</script>
+
+
+
+<!-- =====================================================
+     SUBJECTS DROPDOWN JAVASCRIPT
+====================================================== -->
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+
+  const dropdown =
+    document.getElementById("subjectsDropdown");
+
+
+  const button =
+    document.getElementById("subjectsButton");
+
+
+  const menu =
+    document.getElementById("subjectsMenu");
+
+
+  const submenuTriggers =
+    document.querySelectorAll(".submenu-trigger");
+
+
+
+  /* =================================================
+     MAIN SUBJECTS BUTTON
+  ================================================== */
+
+  button.addEventListener("click", function (event) {
+
+    event.stopPropagation();
+
+
+    const isOpen =
+      dropdown.classList.contains("active");
+
+
+    if (!isOpen) {
+
+      dropdown.classList.add("active");
+
+      button.setAttribute(
+        "aria-expanded",
+        "true"
+      );
+
+    }
+
+    else {
+
+      dropdown.classList.remove("active");
+
+      button.setAttribute(
+        "aria-expanded",
+        "false"
+      );
+
+
+      document
+        .querySelectorAll(".sub-dropdown.active")
+        .forEach(function (item) {
+
+          item.classList.remove("active");
+
+        });
+
+    }
+
+  });
+
+
+
+  /* =================================================
+     MATHEMATICS / PHYSICS / CHEMISTRY
+  ================================================== */
+
+  submenuTriggers.forEach(function (trigger) {
+
+
+    trigger.addEventListener(
+      "click",
+      function (event) {
+
+        event.preventDefault();
+
+        event.stopPropagation();
+
+
+        const parent =
+          trigger.closest(".sub-dropdown");
+
+
+        /* Close other submenus */
+
+        document
+          .querySelectorAll(".sub-dropdown.active")
+          .forEach(function (item) {
+
+            if (item !== parent) {
+
+              item.classList.remove("active");
+
+            }
+
+          });
+
+
+        /* Toggle selected submenu */
+
+        parent.classList.toggle("active");
+
+      }
+    );
+
+
+  });
+
+
+
+  /* =================================================
+     CLOSE WHEN CLICKING OUTSIDE
+  ================================================== */
+
+  document.addEventListener(
+    "click",
+    function (event) {
+
+
+      if (!dropdown.contains(event.target)) {
+
+
+        dropdown.classList.remove("active");
+
+
+        button.setAttribute(
+          "aria-expanded",
+          "false"
+        );
+
+
+        document
+          .querySelectorAll(".sub-dropdown.active")
+          .forEach(function (item) {
+
+            item.classList.remove("active");
+
+          });
+
+      }
+
+    }
+  );
+
+
+
+  /* =================================================
+     KEEP DROPDOWN OPEN WHEN CLICKING INSIDE
+  ================================================== */
+
+  menu.addEventListener(
+    "click",
+    function (event) {
+
+      event.stopPropagation();
+
+    }
+  );
+
+
+});
 
 </script>
 
