@@ -38,7 +38,7 @@ Happy Raksha Bandhan ❤️ | A Special Celebration for My Beautiful Sisters
 
 <link
   rel="preconnect"
-  href="https://fonts.gstatic.com"
+  href="https://fonts.googleapis.com"
   crossorigin
 >
 
@@ -1278,11 +1278,8 @@ h1 {
 
   background-size: 250% auto;
 
-  /* FIXED:
-     Standard property added for compatibility */
   background-clip: text;
 
-  /* WebKit compatibility */
   -webkit-background-clip: text;
 
   -webkit-text-fill-color: transparent;
@@ -1689,11 +1686,8 @@ h1 {
 
   background-size: 250% auto;
 
-  /* FIXED:
-     Standard property added for compatibility */
   background-clip: text;
 
-  /* WebKit compatibility */
   -webkit-background-clip: text;
 
   -webkit-text-fill-color: transparent;
@@ -1906,6 +1900,26 @@ h1 {
 
 
 <body class="locked">
+
+
+<!-- =====================================================
+     MUSIC
+===================================================== -->
+
+<audio
+  id="rakshaMusic"
+  preload="auto"
+  loop
+  playsinline
+>
+  <source
+    src="music.mp3"
+    type="audio/mpeg"
+  >
+
+  Your browser does not support the audio element.
+
+</audio>
 
 
 <!-- =====================================================
@@ -2295,6 +2309,9 @@ h1 {
         <br>
 
         Your Brother ❤️
+
+        <br>
+
         Krishan Kalia
 
       </div>
@@ -2470,6 +2487,47 @@ createStars();
 
 
 /* =====================================================
+   MUSIC
+===================================================== */
+
+const music =
+  document.getElementById("rakshaMusic");
+
+
+/*
+   Start the music when the visitor
+   taps the gift.
+
+   This is important because browsers
+   normally block autoplay until the
+   user interacts with the page.
+*/
+
+function startMusic() {
+
+  music.volume = 0.65;
+
+  const playPromise =
+    music.play();
+
+
+  if (playPromise !== undefined) {
+
+    playPromise.catch(() => {
+
+      console.log(
+        "Music playback was blocked by the browser."
+      );
+
+    });
+
+  }
+
+}
+
+
+
+/* =====================================================
    OPEN GIFT
 ===================================================== */
 
@@ -2483,6 +2541,13 @@ function openGift() {
   giftOpened = true;
 
 
+  /* ===================================================
+     START MUSIC
+  =================================================== */
+
+  startMusic();
+
+
   const giftArea =
     document.getElementById("giftArea");
 
@@ -2492,7 +2557,6 @@ function openGift() {
 
   /* ===================================================
      OPENING BURST
-     Happens only when the gift is opened.
   =================================================== */
 
   createBurstParticles(
@@ -2799,18 +2863,6 @@ function checkFinalSection() {
 
 function startFinalCelebration() {
 
-  /*
-     IMPORTANT:
-
-     The final section creates
-     ONLY ❤️ hearts.
-
-     No flowers.
-     No confetti.
-     No other emojis.
-  */
-
-
   for (
     let i = 0;
     i < 90;
@@ -2829,11 +2881,6 @@ function startFinalCelebration() {
       "❤️";
 
 
-    /*
-       Random starting position
-       across the bottom of the screen.
-    */
-
     heart.style.left =
       Math.random() * 100 + "vw";
 
@@ -2845,10 +2892,6 @@ function startFinalCelebration() {
       ) + "px";
 
 
-    /*
-       Natural sideways movement.
-    */
-
     heart.style.setProperty(
       "--drift",
       (
@@ -2858,11 +2901,6 @@ function startFinalCelebration() {
     );
 
 
-    /*
-       Different heart sizes
-       make the animation look natural.
-    */
-
     heart.style.fontSize =
       (
         14 +
@@ -2870,21 +2908,12 @@ function startFinalCelebration() {
       ) + "px";
 
 
-    /*
-       Different rising speeds.
-    */
-
     heart.style.animationDuration =
       (
         6 +
         Math.random() * 7
       ) + "s";
 
-
-    /*
-       Hearts appear gradually
-       instead of all at once.
-    */
 
     heart.style.animationDelay =
       Math.random() * 5 + "s";
@@ -2894,10 +2923,6 @@ function startFinalCelebration() {
       heart
     );
 
-
-    /*
-       Remove after animation.
-    */
 
     setTimeout(() => {
 
@@ -2953,6 +2978,7 @@ document
   );
 
 </script>
+
 
 </body>
 
