@@ -1,0 +1,2950 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1.0"
+>
+
+<title>
+Happy Raksha Bandhan ❤️ | A Special Celebration for My Beautiful Sisters
+</title>
+
+<meta
+  name="description"
+  content="A beautiful interactive Raksha Bandhan celebration from brother to his beautiful sisters, filled with love, rakhi, memories, hearts, gifts and heartfelt wishes."
+>
+
+<meta
+  name="keywords"
+  content="Happy Raksha Bandhan, Raksha Bandhan wishes, Rakhi wishes for sister, brother sister love, Raksha Bandhan greeting"
+>
+
+<meta
+  name="author"
+  content="Krishan Kalia"
+>
+
+
+<!-- =====================================================
+     GOOGLE FONTS
+===================================================== -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link
+  rel="preconnect"
+  href="https://fonts.gstatic.com"
+  crossorigin
+>
+
+<link
+  href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap"
+  rel="stylesheet"
+>
+
+
+<style>
+
+/* =====================================================
+   RESET
+===================================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+body {
+
+  min-height: 100vh;
+
+  font-family: "Poppins", sans-serif;
+
+  color: white;
+
+  overflow-x: hidden;
+
+  background:
+
+    radial-gradient(
+      circle at 15% 10%,
+      rgba(255, 92, 138, .30),
+      transparent 30%
+    ),
+
+    radial-gradient(
+      circle at 85% 30%,
+      rgba(155, 108, 255, .22),
+      transparent 30%
+    ),
+
+    radial-gradient(
+      circle at 50% 100%,
+      rgba(255, 170, 100, .12),
+      transparent 35%
+    ),
+
+    linear-gradient(
+      135deg,
+      #120718,
+      #2a0d30,
+      #170821,
+      #250c2c
+    );
+
+}
+
+
+body.locked {
+  overflow: hidden;
+}
+
+
+/* =====================================================
+   BACKGROUND
+===================================================== */
+
+.background {
+
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 0;
+
+  pointer-events: none;
+
+  overflow: hidden;
+
+}
+
+
+.glow {
+
+  position: absolute;
+
+  width: 420px;
+
+  height: 420px;
+
+  border-radius: 50%;
+
+  filter: blur(110px);
+
+  opacity: .3;
+
+  animation:
+    glowMove 14s infinite alternate ease-in-out;
+
+}
+
+
+.glow.one {
+
+  background: #ff4f89;
+
+  left: -180px;
+
+  top: -160px;
+
+}
+
+
+.glow.two {
+
+  background: #8e62ff;
+
+  right: -180px;
+
+  bottom: -160px;
+
+  animation-delay: 4s;
+
+}
+
+
+.glow.three {
+
+  background: #ffbf68;
+
+  width: 260px;
+
+  height: 260px;
+
+  left: 45%;
+
+  top: 45%;
+
+  opacity: .12;
+
+  animation-delay: 2s;
+
+}
+
+
+@keyframes glowMove {
+
+  0% {
+
+    transform:
+      translate(0,0)
+      scale(1);
+
+  }
+
+  50% {
+
+    transform:
+      translate(80px,60px)
+      scale(1.2);
+
+  }
+
+  100% {
+
+    transform:
+      translate(-30px,100px)
+      scale(.95);
+
+  }
+
+}
+
+
+/* =====================================================
+   STAR FIELD
+===================================================== */
+
+.stars {
+
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 1;
+
+  pointer-events: none;
+
+}
+
+
+.star {
+
+  position: absolute;
+
+  width: 3px;
+
+  height: 3px;
+
+  border-radius: 50%;
+
+  background: rgba(255,255,255,.8);
+
+  animation:
+    twinkle 3s infinite ease-in-out;
+
+}
+
+
+@keyframes twinkle {
+
+  0%,100% {
+
+    opacity: .15;
+
+    transform: scale(.6);
+
+  }
+
+  50% {
+
+    opacity: 1;
+
+    transform: scale(1.4);
+
+  }
+
+}
+
+
+/* =====================================================
+   RISING PARTICLES
+===================================================== */
+
+.particle {
+
+  position: fixed;
+
+  left: 0;
+
+  bottom: -60px;
+
+  z-index: 50;
+
+  pointer-events: none;
+
+  user-select: none;
+
+  animation:
+    particleRise linear forwards;
+
+}
+
+
+@keyframes particleRise {
+
+  0% {
+
+    opacity: 0;
+
+    transform:
+      translateY(0)
+      translateX(0)
+      rotate(-10deg)
+      scale(.55);
+
+  }
+
+  10% {
+
+    opacity: .95;
+
+  }
+
+  35% {
+
+    transform:
+      translateY(-35vh)
+      translateX(var(--drift))
+      rotate(8deg)
+      scale(1);
+
+  }
+
+  65% {
+
+    transform:
+      translateY(-70vh)
+      translateX(calc(var(--drift) * -0.4))
+      rotate(-8deg)
+      scale(1.08);
+
+  }
+
+  100% {
+
+    opacity: 0;
+
+    transform:
+      translateY(-125vh)
+      translateX(var(--drift))
+      rotate(12deg)
+      scale(1.25);
+
+  }
+
+}
+
+
+/* =====================================================
+   INTRO SCREEN
+===================================================== */
+
+#intro {
+
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 1000;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  padding: 20px;
+
+  background:
+
+    radial-gradient(
+      circle at 50% 30%,
+      rgba(255,100,150,.20),
+      transparent 35%
+    ),
+
+    linear-gradient(
+      135deg,
+      #120718,
+      #2a0d30,
+      #170821
+    );
+
+  transition:
+
+    opacity 1.2s ease,
+    visibility 1.2s ease;
+
+}
+
+
+#intro.hide {
+
+  opacity: 0;
+
+  visibility: hidden;
+
+  pointer-events: none;
+
+}
+
+
+.intro-card {
+
+  width: 100%;
+
+  max-width: 620px;
+
+  padding: 55px 30px;
+
+  text-align: center;
+
+  border-radius: 38px;
+
+  background:
+
+    linear-gradient(
+      145deg,
+      rgba(255,255,255,.14),
+      rgba(255,255,255,.035)
+    );
+
+  border:
+    1px solid rgba(255,255,255,.18);
+
+  backdrop-filter: blur(30px);
+
+  -webkit-backdrop-filter: blur(30px);
+
+  box-shadow:
+
+    0 40px 120px rgba(0,0,0,.55),
+
+    inset 0 1px 0
+    rgba(255,255,255,.16);
+
+  animation:
+    introCard 1.4s ease;
+
+}
+
+
+@keyframes introCard {
+
+  from {
+
+    opacity: 0;
+
+    transform:
+      translateY(60px)
+      scale(.88);
+
+  }
+
+  to {
+
+    opacity: 1;
+
+    transform:
+      translateY(0)
+      scale(1);
+
+  }
+
+}
+
+
+/* =====================================================
+   INTRO ORNAMENT
+===================================================== */
+
+.intro-ornament {
+
+  font-size: 14px;
+
+  letter-spacing: 5px;
+
+  color: #f7c5d7;
+
+  margin-bottom: 18px;
+
+  text-transform: uppercase;
+
+}
+
+
+/* =====================================================
+   PREMIUM GIFT
+===================================================== */
+
+.gift-area {
+
+  position: relative;
+
+  width: 230px;
+
+  height: 230px;
+
+  margin:
+    0 auto 25px;
+
+  cursor: pointer;
+
+  perspective: 800px;
+
+}
+
+
+.gift-glow {
+
+  position: absolute;
+
+  width: 180px;
+
+  height: 180px;
+
+  left: 25px;
+
+  top: 30px;
+
+  border-radius: 50%;
+
+  background:
+
+    radial-gradient(
+      circle,
+      rgba(255,190,110,.5),
+      transparent 65%
+    );
+
+  filter: blur(15px);
+
+  animation:
+    giftGlow 2s infinite ease-in-out;
+
+}
+
+
+@keyframes giftGlow {
+
+  50% {
+
+    transform: scale(1.3);
+
+    opacity: .55;
+
+  }
+
+}
+
+
+.gift {
+
+  position: absolute;
+
+  width: 135px;
+
+  height: 105px;
+
+  left: 48px;
+
+  top: 105px;
+
+  transform-style: preserve-3d;
+
+  animation:
+    giftFloat 2.5s infinite ease-in-out;
+
+}
+
+
+@keyframes giftFloat {
+
+  0%,100% {
+
+    transform:
+      translateY(0)
+      rotateY(0);
+
+  }
+
+  50% {
+
+    transform:
+      translateY(-12px)
+      rotateY(4deg);
+
+  }
+
+}
+
+
+.gift-body {
+
+  position: absolute;
+
+  width: 135px;
+
+  height: 100px;
+
+  left: 0;
+
+  top: 0;
+
+  border-radius: 10px;
+
+  background:
+
+    linear-gradient(
+      135deg,
+      #ff78a6,
+      #ca3273
+    );
+
+  box-shadow:
+
+    0 20px 40px rgba(0,0,0,.4),
+
+    inset 0 1px 0
+    rgba(255,255,255,.25);
+
+}
+
+
+.gift-body::after {
+
+  content: "";
+
+  position: absolute;
+
+  left: 56px;
+
+  top: 0;
+
+  width: 23px;
+
+  height: 100%;
+
+  background:
+
+    linear-gradient(
+      90deg,
+      #f4b94e,
+      #ffe7a5,
+      #e8a52e
+    );
+
+  box-shadow:
+    0 0 15px rgba(255,210,100,.35);
+
+}
+
+
+.gift-lid {
+
+  position: absolute;
+
+  width: 155px;
+
+  height: 34px;
+
+  left: -10px;
+
+  top: -16px;
+
+  border-radius: 9px;
+
+  z-index: 5;
+
+  background:
+
+    linear-gradient(
+      135deg,
+      #ff91b7,
+      #d63f7b
+    );
+
+  box-shadow:
+
+    0 10px 20px rgba(0,0,0,.3),
+
+    inset 0 1px 0
+    rgba(255,255,255,.25);
+
+}
+
+
+.gift-lid::after {
+
+  content: "";
+
+  position: absolute;
+
+  width: 25px;
+
+  height: 34px;
+
+  left: 65px;
+
+  top: 0;
+
+  background:
+
+    linear-gradient(
+      90deg,
+      #e7a634,
+      #fff0b7,
+      #e7a634
+    );
+
+}
+
+
+.bow {
+
+  position: absolute;
+
+  z-index: 10;
+
+  width: 58px;
+
+  height: 40px;
+
+  top: -45px;
+
+  left: 38px;
+
+}
+
+
+.bow::before,
+.bow::after {
+
+  content: "";
+
+  position: absolute;
+
+  width: 42px;
+
+  height: 30px;
+
+  border:
+    8px solid #ffd36d;
+
+  border-radius: 50%;
+
+}
+
+
+.bow::before {
+
+  left: -6px;
+
+  transform: rotate(28deg);
+
+}
+
+
+.bow::after {
+
+  right: -6px;
+
+  transform: rotate(-28deg);
+
+}
+
+
+.bow-center {
+
+  position: absolute;
+
+  width: 20px;
+
+  height: 20px;
+
+  background: #fff0b1;
+
+  border-radius: 50%;
+
+  left: 19px;
+
+  top: 5px;
+
+  box-shadow:
+    0 0 15px rgba(255,210,100,.8);
+
+}
+
+
+/* =====================================================
+   GIFT OPEN ANIMATION
+===================================================== */
+
+.gift-area.open .gift {
+
+  animation: none;
+
+}
+
+
+.gift-area.open .gift-lid {
+
+  animation:
+    lidOpen 1.1s forwards ease-in-out;
+
+}
+
+
+@keyframes lidOpen {
+
+  0% {
+
+    transform:
+      translateY(0)
+      rotate(0);
+
+  }
+
+  60% {
+
+    transform:
+      translateY(-75px)
+      rotate(-12deg);
+
+  }
+
+  100% {
+
+    transform:
+      translateY(-110px)
+      rotate(-20deg);
+
+    opacity: 0;
+
+  }
+
+}
+
+
+/* =====================================================
+   INTRO TEXT
+===================================================== */
+
+.tap {
+
+  font-size: 12px;
+
+  letter-spacing: 4px;
+
+  color: #f9c8da;
+
+  text-transform: uppercase;
+
+  animation:
+    tapPulse 1.8s infinite;
+
+}
+
+
+@keyframes tapPulse {
+
+  50% {
+
+    opacity: .4;
+
+    letter-spacing: 6px;
+
+  }
+
+}
+
+
+/* =====================================================
+   SECTIONS
+===================================================== */
+
+.section {
+
+  min-height: 100vh;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  padding:
+    90px 20px;
+
+  position: relative;
+
+  z-index: 5;
+
+}
+
+
+.content {
+
+  width: 100%;
+
+  max-width: 950px;
+
+}
+
+
+/* =====================================================
+   GLASS CARD
+===================================================== */
+
+.glass-card {
+
+  width: 100%;
+
+  padding:
+    65px 55px;
+
+  text-align: center;
+
+  border-radius: 38px;
+
+  background:
+
+    linear-gradient(
+      145deg,
+      rgba(255,255,255,.13),
+      rgba(255,255,255,.035)
+    );
+
+  border:
+    1px solid rgba(255,255,255,.17);
+
+  backdrop-filter:
+    blur(28px);
+
+  -webkit-backdrop-filter:
+    blur(28px);
+
+  box-shadow:
+
+    0 35px 110px
+    rgba(0,0,0,.45),
+
+    inset 0 1px 0
+    rgba(255,255,255,.13);
+
+  position: relative;
+
+  overflow: hidden;
+
+}
+
+
+.glass-card::before {
+
+  content: "";
+
+  position: absolute;
+
+  width: 200px;
+
+  height: 200px;
+
+  border-radius: 50%;
+
+  background:
+    rgba(255,170,200,.08);
+
+  filter: blur(40px);
+
+  top: -100px;
+
+  left: -100px;
+
+}
+
+
+.glass-card::after {
+
+  content: "";
+
+  position: absolute;
+
+  width: 180px;
+
+  height: 180px;
+
+  border-radius: 50%;
+
+  background:
+    rgba(155,108,255,.07);
+
+  filter: blur(40px);
+
+  right: -80px;
+
+  bottom: -80px;
+
+}
+
+
+/* =====================================================
+   RAKHI
+===================================================== */
+
+.rakhi-wrap {
+
+  width: 175px;
+
+  height: 175px;
+
+  margin:
+    0 auto 35px;
+
+  position: relative;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+}
+
+
+.rakhi-halo {
+
+  position: absolute;
+
+  inset: 0;
+
+  border-radius: 50%;
+
+  background:
+
+    radial-gradient(
+      circle,
+      rgba(255,205,115,.25),
+      transparent 65%
+    );
+
+  filter: blur(5px);
+
+  animation:
+    haloPulse 2.5s infinite;
+
+}
+
+
+@keyframes haloPulse {
+
+  50% {
+
+    transform: scale(1.25);
+
+    opacity: .55;
+
+  }
+
+}
+
+
+.rakhi {
+
+  width: 145px;
+
+  height: 145px;
+
+  border-radius: 50%;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  font-size: 74px;
+
+  position: relative;
+
+  z-index: 2;
+
+  background:
+
+    radial-gradient(
+      circle,
+      #fff6dc 0%,
+      #ffd36f 25%,
+      #ee6797 27%,
+      #b93476 58%,
+      #632966 100%
+    );
+
+  box-shadow:
+
+    0 0 25px
+    rgba(255,190,100,.75),
+
+    0 0 70px
+    rgba(255,90,150,.35),
+
+    inset 0 0 20px
+    rgba(255,255,255,.25);
+
+  animation:
+    rakhiPulse 3s infinite ease-in-out;
+
+}
+
+
+@keyframes rakhiPulse {
+
+  50% {
+
+    transform: scale(1.08);
+
+    box-shadow:
+
+      0 0 40px
+      rgba(255,200,100,1),
+
+      0 0 100px
+      rgba(255,90,160,.55),
+
+      inset 0 0 25px
+      rgba(255,255,255,.3);
+
+  }
+
+}
+
+
+/* =====================================================
+   RAKHI THREAD
+===================================================== */
+
+.thread {
+
+  width: 100%;
+
+  max-width: 520px;
+
+  height: 40px;
+
+  margin:
+    0 auto 35px;
+
+  position: relative;
+
+}
+
+
+.thread::before {
+
+  content: "";
+
+  position: absolute;
+
+  top: 14px;
+
+  left: 0;
+
+  right: 0;
+
+  height: 11px;
+
+  border-radius: 50px;
+
+  background:
+
+    repeating-linear-gradient(
+      90deg,
+      #a82969 0 14px,
+      #ff75a3 14px 28px,
+      #ffd26d 28px 40px,
+      #ff75a3 40px 54px
+    );
+
+  box-shadow:
+    0 0 20px
+    rgba(255,110,160,.45);
+
+}
+
+
+.thread::after {
+
+  content: "✦";
+
+  position: absolute;
+
+  left: 50%;
+
+  top: -42px;
+
+  transform: translateX(-50%);
+
+  color: #ffe09a;
+
+  font-size: 20px;
+
+  animation:
+    sparkle 1.7s infinite;
+
+}
+
+
+@keyframes sparkle {
+
+  50% {
+
+    transform:
+      translateX(-50%)
+      scale(1.5)
+      rotate(180deg);
+
+    opacity: .45;
+
+  }
+
+}
+
+
+/* =====================================================
+   TEXT
+===================================================== */
+
+.small-title {
+
+  font-size: 13px;
+
+  letter-spacing: 5px;
+
+  text-transform: uppercase;
+
+  color: #f5bfd2;
+
+  margin-bottom: 20px;
+
+}
+
+
+h1 {
+
+  font-family:
+    "Playfair Display",
+    serif;
+
+  font-size:
+    clamp(45px, 8vw, 85px);
+
+  line-height: 1.05;
+
+  font-weight: 600;
+
+  margin-bottom: 25px;
+
+  background:
+
+    linear-gradient(
+      90deg,
+      #fff,
+      #ffd4e2,
+      #f6abc8,
+      #fff,
+      #ffd4e2
+    );
+
+  background-size: 250% auto;
+
+  -webkit-background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+
+  animation:
+    shine 5s linear infinite;
+
+}
+
+
+@keyframes shine {
+
+  to {
+
+    background-position: 250% center;
+
+  }
+
+}
+
+
+.subtitle {
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size:
+    clamp(22px,4vw,31px);
+
+  line-height: 1.5;
+
+  color: #f4dce6;
+
+}
+
+
+/* =====================================================
+   SCROLL HINT
+===================================================== */
+
+.scroll-hint {
+
+  margin-top: 55px;
+
+  font-size: 11px;
+
+  letter-spacing: 4px;
+
+  text-transform: uppercase;
+
+  color: #dfbdcb;
+
+  animation:
+    scrollHint 2s infinite;
+
+}
+
+
+.scroll-arrow {
+
+  display: block;
+
+  font-size: 26px;
+
+  margin-top: 10px;
+
+}
+
+
+@keyframes scrollHint {
+
+  0%,100% {
+
+    transform: translateY(0);
+
+    opacity: .5;
+
+  }
+
+  50% {
+
+    transform: translateY(9px);
+
+    opacity: 1;
+
+  }
+
+}
+
+
+/* =====================================================
+   QUOTE
+===================================================== */
+
+.quote-card {
+
+  padding:
+    70px 50px;
+
+}
+
+
+.quote-decoration {
+
+  font-size: 35px;
+
+  color: #ffd37a;
+
+  margin-bottom: 25px;
+
+  animation:
+    heartbeat 2s infinite;
+
+}
+
+
+.quote {
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size:
+    clamp(30px,5vw,48px);
+
+  line-height: 1.35;
+
+  font-style: italic;
+
+  color: #fff0f5;
+
+}
+
+
+.quote::before {
+
+  content: "“";
+
+  font-size: 90px;
+
+  line-height: 0;
+
+  color: rgba(255,210,120,.3);
+
+  vertical-align: -35px;
+
+}
+
+
+.quote-author {
+
+  margin-top: 30px;
+
+  font-size: 13px;
+
+  letter-spacing: 3px;
+
+  color: #e8b5c8;
+
+}
+
+
+/* =====================================================
+   MESSAGE CARD
+===================================================== */
+
+.message-card {
+
+  padding:
+    65px 55px;
+
+  border-radius: 35px;
+
+  background:
+
+    linear-gradient(
+      145deg,
+      rgba(255,255,255,.14),
+      rgba(255,255,255,.035)
+    );
+
+  border:
+    1px solid rgba(255,255,255,.18);
+
+  box-shadow:
+
+    0 35px 110px
+    rgba(0,0,0,.5),
+
+    inset 0 1px 0
+    rgba(255,255,255,.14);
+
+  position: relative;
+
+  overflow: hidden;
+
+}
+
+
+.message-card::before {
+
+  content: "❤️";
+
+  position: absolute;
+
+  font-size: 230px;
+
+  opacity: .025;
+
+  right: -40px;
+
+  top: 40px;
+
+  transform: rotate(15deg);
+
+}
+
+
+.message-heading {
+
+  text-align: center;
+
+  font-family:
+    "Playfair Display",
+    serif;
+
+  font-size:
+    clamp(32px,5vw,52px);
+
+  color: #ffd4e2;
+
+  margin-bottom: 45px;
+
+}
+
+
+.message p {
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size:
+    clamp(21px,3vw,28px);
+
+  line-height: 1.7;
+
+  color: #f9eaf0;
+
+  margin-bottom: 25px;
+
+}
+
+
+.message strong {
+
+  color: #ffd0df;
+
+}
+
+
+.signature {
+
+  margin-top: 50px;
+
+  text-align: right;
+
+  font-family:
+    "Playfair Display",
+    serif;
+
+  font-size: 26px;
+
+  font-style: italic;
+
+  color: #ffc4d8;
+
+}
+
+
+.big-heart {
+
+  text-align: center;
+
+  font-size: 55px;
+
+  margin-top: 35px;
+
+  animation:
+    heartbeat 1.4s infinite;
+
+}
+
+
+@keyframes heartbeat {
+
+  0%,100% {
+
+    transform: scale(1);
+
+  }
+
+  50% {
+
+    transform: scale(1.22);
+
+  }
+
+}
+
+
+/* =====================================================
+   MEMORY DIVIDER
+===================================================== */
+
+.memory-divider {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 15px;
+
+  margin:
+    25px 0 45px;
+
+  color: #e4b5c8;
+
+}
+
+
+.memory-divider::before,
+.memory-divider::after {
+
+  content: "";
+
+  height: 1px;
+
+  flex: 1;
+
+  max-width: 180px;
+
+  background:
+
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(255,200,220,.4),
+      transparent
+    );
+
+}
+
+
+/* =====================================================
+   FINAL SECTION
+===================================================== */
+
+.final-section {
+
+  min-height: 100vh;
+
+  position: relative;
+
+  overflow: hidden;
+
+}
+
+
+.final-section .glass-card {
+
+  padding:
+    75px 45px;
+
+}
+
+
+.final-title {
+
+  font-family:
+    "Playfair Display",
+    serif;
+
+  font-size:
+    clamp(42px,7vw,78px);
+
+  line-height: 1.15;
+
+  font-weight: 600;
+
+  background:
+
+    linear-gradient(
+      90deg,
+      #fff,
+      #ffd2e0,
+      #ffd176,
+      #ffd2e0,
+      #fff
+    );
+
+  background-size: 250% auto;
+
+  -webkit-background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+
+  animation:
+    shine 5s linear infinite;
+
+}
+
+
+.final-subtitle {
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size:
+    clamp(23px,4vw,34px);
+
+  line-height: 1.5;
+
+  margin-top: 30px;
+
+  color: #f5dce7;
+
+}
+
+
+.final-love {
+
+  font-size: 65px;
+
+  margin-top: 35px;
+
+  animation:
+    finalHeart 1.5s infinite ease-in-out;
+
+}
+
+
+@keyframes finalHeart {
+
+  0%,100% {
+
+    transform:
+      scale(1);
+
+  }
+
+  50% {
+
+    transform:
+      scale(1.2)
+      rotate(3deg);
+
+  }
+
+}
+
+
+/* =====================================================
+   CREDIT
+===================================================== */
+
+.credit {
+
+  margin-top: 60px;
+
+  padding-top: 25px;
+
+  border-top:
+    1px solid
+    rgba(255,255,255,.12);
+
+  font-size: 12px;
+
+  letter-spacing: 3px;
+
+  color: #cdb1bf;
+
+  text-transform: uppercase;
+
+}
+
+
+.credit-name {
+
+  display: inline-block;
+
+  margin-top: 10px;
+
+  font-family:
+    "Playfair Display",
+    serif;
+
+  font-size: 21px;
+
+  letter-spacing: 1px;
+
+  color: #ffd0df;
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media(max-width:600px) {
+
+  .section {
+
+    padding:
+      60px 15px;
+
+  }
+
+
+  .glass-card {
+
+    padding:
+      50px 22px;
+
+    border-radius: 27px;
+
+  }
+
+
+  .intro-card {
+
+    padding:
+      45px 20px;
+
+    border-radius: 28px;
+
+  }
+
+
+  .message-card {
+
+    padding:
+      35px 23px;
+
+  }
+
+
+  .quote-card {
+
+    padding:
+      50px 22px;
+
+  }
+
+
+  .rakhi-wrap {
+
+    transform:
+      scale(.85);
+
+    margin-bottom: 15px;
+
+  }
+
+
+  .thread {
+
+    max-width: 330px;
+
+  }
+
+
+  .final-section .glass-card {
+
+    padding:
+      55px 22px;
+
+  }
+
+
+  .credit {
+
+    letter-spacing: 2px;
+
+  }
+
+}
+
+
+/* =====================================================
+   REDUCED MOTION
+===================================================== */
+
+@media(prefers-reduced-motion: reduce) {
+
+  * {
+
+    animation-duration: .01ms !important;
+
+    animation-iteration-count: 1 !important;
+
+    scroll-behavior: auto !important;
+
+  }
+
+}
+
+</style>
+
+</head>
+
+
+<body class="locked">
+
+
+<!-- =====================================================
+     BACKGROUND
+===================================================== -->
+
+<div class="background">
+
+  <div class="glow one"></div>
+
+  <div class="glow two"></div>
+
+  <div class="glow three"></div>
+
+</div>
+
+
+<div
+  class="stars"
+  id="stars"
+></div>
+
+
+<!-- =====================================================
+     INTRODUCTION / GIFT
+===================================================== -->
+
+<div id="intro">
+
+  <div class="intro-card">
+
+
+    <div class="intro-ornament">
+
+      A Little Surprise For You
+
+    </div>
+
+
+    <div
+      class="gift-area"
+      id="giftArea"
+      onclick="openGift()"
+    >
+
+      <div class="gift-glow"></div>
+
+
+      <div class="gift">
+
+        <div class="gift-body"></div>
+
+
+        <div class="gift-lid">
+
+          <div class="bow">
+
+            <div class="bow-center"></div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <div class="small-title">
+
+      For My Beautiful Sisters ❤️
+
+    </div>
+
+
+    <h1
+      style="
+        font-size:clamp(40px,7vw,65px);
+        margin-bottom:18px;
+      "
+    >
+
+      Tap to Open
+
+    </h1>
+
+
+    <div class="subtitle">
+
+      A little Raksha Bandhan surprise
+
+      <br>
+
+      made with lots of love... 🎁
+
+    </div>
+
+
+    <div class="tap">
+
+      ✦ Tap The Gift ✦
+
+    </div>
+
+  </div>
+
+</div>
+
+
+
+<!-- =====================================================
+     SECTION 1
+===================================================== -->
+
+<section
+  class="section"
+  id="welcome"
+>
+
+  <div class="content">
+
+    <div class="glass-card">
+
+
+      <div class="rakhi-wrap">
+
+        <div class="rakhi-halo"></div>
+
+        <div class="rakhi">
+
+          🎀
+
+        </div>
+
+      </div>
+
+
+      <div class="small-title">
+
+        A Bond Beyond Words
+
+      </div>
+
+
+      <h1>
+
+        Happy Raksha Bandhan
+
+      </h1>
+
+
+      <div class="subtitle">
+
+        Some bonds are not just made...
+
+        <br>
+
+        they are cherished forever. ❤️
+
+      </div>
+
+
+      <div class="scroll-hint">
+
+        Scroll to continue
+
+        <span class="scroll-arrow">
+
+          ↓
+
+        </span>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     SECTION 2 — RAKHI
+===================================================== -->
+
+<section
+  class="section"
+  id="rakhiSection"
+>
+
+  <div class="content">
+
+    <div class="glass-card quote-card">
+
+
+      <div class="small-title">
+
+        A Thread of Love
+
+      </div>
+
+
+      <div class="rakhi-wrap">
+
+        <div class="rakhi-halo"></div>
+
+        <div class="rakhi">
+
+          🎀
+
+        </div>
+
+      </div>
+
+
+      <div class="thread"></div>
+
+
+      <div class="quote-decoration">
+
+        ✨ ❤️ ✨
+
+      </div>
+
+
+      <div class="quote">
+
+        A Rakhi may be a simple thread,
+
+        but the love, memories and bond
+        behind it are priceless.
+
+        <br><br>
+
+        No distance can ever make
+        this bond less special.
+
+      </div>
+
+
+      <div class="quote-author">
+
+        — A Brother's Promise
+
+      </div>
+
+
+      <div class="scroll-hint">
+
+        There's more waiting for you
+
+        <span class="scroll-arrow">
+
+          ↓
+
+        </span>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     SECTION 3 — MESSAGE
+===================================================== -->
+
+<section
+  class="section"
+  id="messageSection"
+>
+
+  <div class="content">
+
+
+    <div class="message-card">
+
+
+      <div class="message-heading">
+
+        To My Beautiful Sisters ❤️
+
+      </div>
+
+
+      <div class="memory-divider">
+
+        ✦
+
+        Memories • Love • Forever
+
+        ✦
+
+      </div>
+
+
+      <p>
+
+        There are so many things in life that
+        change with time, but one thing I know
+        will always remain the same —
+
+        <strong>
+          the bond we share.
+        </strong>
+
+      </p>
+
+
+      <p>
+
+        We may argue over the smallest things,
+        annoy each other for absolutely no reason,
+        and sometimes wonder how we even survive
+        each other's craziness 😂...
+
+        But behind all those little fights is
+        something much bigger —
+
+        <strong>
+          a love, a friendship, and a connection
+          that I will always treasure.
+        </strong>
+
+      </p>
+
+
+      <p>
+
+        Thank you for being there through the
+        good days, the difficult days, the
+        random laughs, the unforgettable memories,
+        and all those little moments that somehow
+        became the stories we will remember forever.
+
+      </p>
+
+
+      <p>
+
+        A Rakhi is just a thread...
+
+        but the promise behind it is so much more.
+
+        It represents protection, trust,
+        understanding, memories, and a bond that
+        distance or time can never erase. 🫶
+
+      </p>
+
+
+      <p>
+
+        No matter where life takes us,
+        no matter how much we grow,
+        and no matter how busy life becomes...
+
+        <strong>
+          you will always have a special place
+          in my heart.
+        </strong>
+
+      </p>
+
+
+      <p>
+
+        Here's to all the childhood memories,
+        all the crazy moments still waiting to happen,
+        all the laughter yet to come,
+        and a lifetime of being there for each other.
+
+      </p>
+
+
+      <div class="signature">
+
+        With lots of love,
+
+        <br>
+
+        Your Brother ❤️
+        Krishan Kalia
+
+      </div>
+
+
+      <div class="big-heart">
+
+        ❤️
+
+      </div>
+
+
+      <div class="scroll-hint">
+
+        One final surprise...
+
+        <span class="scroll-arrow">
+
+          ↓
+
+        </span>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FINAL SECTION
+===================================================== -->
+
+<section
+  class="section final-section"
+  id="finalSection"
+>
+
+  <div class="content">
+
+
+    <div class="glass-card">
+
+
+      <div class="rakhi-wrap">
+
+        <div class="rakhi-halo"></div>
+
+        <div class="rakhi">
+
+          🎀
+
+        </div>
+
+      </div>
+
+
+      <div class="small-title">
+
+        Forever & Always
+
+      </div>
+
+
+      <div class="final-title">
+
+        Happy Raksha Bandhan
+
+        <br>
+
+        to my beautiful sisters ❤️
+
+      </div>
+
+
+      <div class="final-subtitle">
+
+        May your life always be filled with
+
+        <br>
+
+        happiness, love, laughter,
+
+        <br>
+
+        success and endless beautiful moments. 💕
+
+      </div>
+
+
+      <div class="final-love">
+
+        ❤️
+
+      </div>
+
+
+      <div class="credit">
+
+        Designed & Coded by
+
+        <div class="credit-name">
+
+          Krishan Kalia
+
+        </div>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<script>
+
+/* =====================================================
+   CREATE STARS
+===================================================== */
+
+function createStars() {
+
+  const container =
+    document.getElementById("stars");
+
+
+  for (
+    let i = 0;
+    i < 100;
+    i++
+  ) {
+
+    const star =
+      document.createElement("div");
+
+
+    star.className = "star";
+
+
+    star.style.left =
+      Math.random() * 100 + "vw";
+
+
+    star.style.top =
+      Math.random() * 100 + "vh";
+
+
+    star.style.animationDelay =
+      Math.random() * 4 + "s";
+
+
+    star.style.opacity =
+      Math.random();
+
+
+    container.appendChild(star);
+
+  }
+
+}
+
+
+createStars();
+
+
+
+/* =====================================================
+   OPEN GIFT
+===================================================== */
+
+let giftOpened = false;
+
+
+function openGift() {
+
+  if (giftOpened) return;
+
+  giftOpened = true;
+
+
+  const giftArea =
+    document.getElementById("giftArea");
+
+
+  giftArea.classList.add("open");
+
+
+  /* ===================================================
+     OPENING BURST
+     This only happens when the gift is opened.
+  =================================================== */
+
+  createBurstParticles(
+    55,
+    [
+      "💖",
+      "❤️",
+      "🌸"
+    ]
+  );
+
+
+  /* ===================================================
+     HIDE INTRO
+  =================================================== */
+
+  setTimeout(() => {
+
+    document
+      .getElementById("intro")
+      .classList.add("hide");
+
+
+    document.body.classList.remove(
+      "locked"
+    );
+
+  }, 1100);
+
+
+  /* ===================================================
+     START AMBIENT PARTICLES
+  =================================================== */
+
+  setTimeout(() => {
+
+    startAmbientParticles();
+
+  }, 1500);
+
+}
+
+
+
+/* =====================================================
+   BURST PARTICLES
+===================================================== */
+
+function createBurstParticles(
+  amount,
+  emojis
+) {
+
+  for (
+    let i = 0;
+    i < amount;
+    i++
+  ) {
+
+    const particle =
+      document.createElement("div");
+
+
+    particle.className =
+      "particle";
+
+
+    particle.innerText =
+      emojis[
+        Math.floor(
+          Math.random() *
+          emojis.length
+        )
+      ];
+
+
+    particle.style.left =
+      Math.random() * 100 + "vw";
+
+
+    particle.style.setProperty(
+      "--drift",
+      (
+        -100 +
+        Math.random() * 200
+      ) + "px"
+    );
+
+
+    particle.style.fontSize =
+      (
+        15 +
+        Math.random() * 30
+      ) + "px";
+
+
+    particle.style.animationDuration =
+      (
+        4 +
+        Math.random() * 5
+      ) + "s";
+
+
+    particle.style.animationDelay =
+      Math.random() * 1.5 + "s";
+
+
+    document.body.appendChild(
+      particle
+    );
+
+
+    setTimeout(() => {
+
+      particle.remove();
+
+    }, 11000);
+
+  }
+
+}
+
+
+
+/* =====================================================
+   AMBIENT PARTICLES
+===================================================== */
+
+let ambientStarted = false;
+
+
+function startAmbientParticles() {
+
+  if (ambientStarted) return;
+
+  ambientStarted = true;
+
+
+  setInterval(() => {
+
+    createAmbientParticle();
+
+  }, 1800);
+
+}
+
+
+function createAmbientParticle() {
+
+  const emojis = [
+    "❤️",
+    "💗",
+    "🌸"
+  ];
+
+
+  const particle =
+    document.createElement("div");
+
+
+  particle.className =
+    "particle";
+
+
+  particle.innerText =
+    emojis[
+      Math.floor(
+        Math.random() *
+        emojis.length
+      )
+    ];
+
+
+  particle.style.left =
+    Math.random() * 100 + "vw";
+
+
+  particle.style.setProperty(
+    "--drift",
+    (
+      -80 +
+      Math.random() * 160
+    ) + "px"
+  );
+
+
+  particle.style.fontSize =
+    (
+      13 +
+      Math.random() * 18
+    ) + "px";
+
+
+  particle.style.animationDuration =
+    (
+      8 +
+      Math.random() * 6
+    ) + "s";
+
+
+  document.body.appendChild(
+    particle
+  );
+
+
+  setTimeout(() => {
+
+    particle.remove();
+
+  }, 15000);
+
+}
+
+
+
+/* =====================================================
+   MESSAGE SECTION HEART EXPLOSION
+===================================================== */
+
+let messageTriggered = false;
+
+
+function checkMessageSection() {
+
+  if (messageTriggered) return;
+
+
+  const section =
+    document.getElementById(
+      "messageSection"
+    );
+
+
+  const rect =
+    section.getBoundingClientRect();
+
+
+  if (
+    rect.top <
+    window.innerHeight * .72
+  ) {
+
+    messageTriggered = true;
+
+
+    createBurstParticles(
+      90,
+      [
+        "❤️",
+        "💗",
+        "🫶"
+      ]
+    );
+
+  }
+
+}
+
+
+
+/* =====================================================
+   FINAL SECTION TRIGGER
+===================================================== */
+
+let finalTriggered = false;
+
+
+function checkFinalSection() {
+
+  if (finalTriggered) return;
+
+
+  const section =
+    document.getElementById(
+      "finalSection"
+    );
+
+
+  const rect =
+    section.getBoundingClientRect();
+
+
+  if (
+    rect.top <
+    window.innerHeight * .75
+  ) {
+
+    finalTriggered = true;
+
+
+    startFinalCelebration();
+
+  }
+
+}
+
+
+
+/* =====================================================
+   FINAL CELEBRATION
+   ONLY ❤️ HEARTS
+   BOTTOM → TOP
+===================================================== */
+
+function startFinalCelebration() {
+
+  /*
+     IMPORTANT:
+
+     The final section no longer creates
+     falling confetti.
+
+     Only ❤️ hearts are generated.
+  */
+
+
+  for (
+    let i = 0;
+    i < 90;
+    i++
+  ) {
+
+    const heart =
+      document.createElement("div");
+
+
+    heart.className =
+      "particle";
+
+
+    heart.innerText =
+      "❤️";
+
+
+    /*
+       Random starting position
+       across the bottom of the screen.
+    */
+
+    heart.style.left =
+      Math.random() * 100 + "vw";
+
+
+    heart.style.bottom =
+      (
+        -20 -
+        Math.random() * 80
+      ) + "px";
+
+
+    /*
+       Natural sideways movement.
+    */
+
+    heart.style.setProperty(
+      "--drift",
+      (
+        -120 +
+        Math.random() * 240
+      ) + "px"
+    );
+
+
+    /*
+       Different heart sizes
+       make the animation look natural.
+    */
+
+    heart.style.fontSize =
+      (
+        14 +
+        Math.random() * 28
+      ) + "px";
+
+
+    /*
+       Different rising speeds.
+    */
+
+    heart.style.animationDuration =
+      (
+        6 +
+        Math.random() * 7
+      ) + "s";
+
+
+    /*
+       Hearts appear gradually
+       instead of all at once.
+    */
+
+    heart.style.animationDelay =
+      Math.random() * 5 + "s";
+
+
+    document.body.appendChild(
+      heart
+    );
+
+
+    /*
+       Remove after animation.
+    */
+
+    setTimeout(() => {
+
+      heart.remove();
+
+    }, 16000);
+
+  }
+
+}
+
+
+
+/* =====================================================
+   SCROLL LISTENER
+===================================================== */
+
+window.addEventListener(
+  "scroll",
+  () => {
+
+    checkMessageSection();
+
+    checkFinalSection();
+
+  },
+  {
+    passive: true
+  }
+);
+
+
+
+/* =====================================================
+   FINAL SECTION MOUSE ENTER
+===================================================== */
+
+document
+  .getElementById("finalSection")
+  .addEventListener(
+    "mouseenter",
+    () => {
+
+      if (!finalTriggered) {
+
+        startFinalCelebration();
+
+        finalTriggered = true;
+
+      }
+
+    }
+  );
+
+</script>
+
+</body>
+
+</html>
+
